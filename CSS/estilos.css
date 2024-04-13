@@ -1,5 +1,5 @@
 *{
-    margin: 10px;
+    margin: 0px;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -7,12 +7,15 @@ body{
     font-family: "Lora", serif;
     font-family: "Montserrat", sans-serif;
 }
+a{
+    text-decoration: none;
+}
 .padre{
     display: flex;
     flex-flow: column nowrap;
 }
     .header{
-    background: url(../img/img2.jpg);/*Esto de ../ nos ayuda a retroceder sobre un directorio*/
+    background: url(../img/img1.jpg);/*Esto de ../ nos ayuda a retroceder sobre un directorio*/
     background-position: center;/*Aqui le damos el aspecto que tendra la imagen*/
     background-attachment: contain;
     background-size: cover;
@@ -21,7 +24,7 @@ body{
     flex-flow: column nowrap;
     }
         .menu{
-            background: #FFC94A;
+            background: rgba(0,0,0,.1);/* PONERLE COLOR NEGRO CON DEGRADE*/
             display: flex;
             flex-flow: row nowrap;
             height: 100px;
@@ -29,22 +32,43 @@ body{
 
         }
             .logo{
-                background: #C08B5C;
+                
                 flex:1 1 auto;
-               
-
             }
+                .logo a{
+                    color: aliceblue;
+                    font-size: 30px;
+                  
+                }
+                .logo a:hover{
+                    color: #e5e912;
+                }
             .nav{
-                background: #C08B5C;
-                flex:5 1 auto;
-                
-
+          
+                flex:5 1 auto;              
             }
+                .nav a{
+                    color: aliceblue;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    padding: 0 10px;
+                    letter-spacing: 2px;
+                }
+                .nav a:hover{
+                    color: #e5e912;
+                }
             .social{
-                background: #C08B5C ;
-                flex:1 1 auto;
-                
+                flex:1 1 auto; 
+                display: flex; 
             }
+                .social a{
+                    font-size: 18px;
+                    color: aliceblue;
+                    padding: 0 5px;
+                }
+                .social a:hover{
+                    color: #2dceff;
+                }
         .texto-principal{
             background: #795458;
         }
