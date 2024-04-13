@@ -1,0 +1,116 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Lora", serif;
+    font-family: "Montserrat", sans-serif;
+}
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+    .header{
+    background: url(../img/img2.jpg);/*Esto de ../ nos ayuda a retroceder sobre un directorio*/
+    background-position: center;/*Aqui le damos el aspecto que tendra la imagen*/
+    background-attachment: contain;
+    background-size: cover;
+
+    display: flex;
+    flex-flow: column nowrap;
+    }
+        .menu{
+            background: #FFC94A;
+            display: flex;
+            flex-flow: row nowrap;
+            height: 100px;
+            align-items: center;
+
+        }
+            .logo{
+                background: #C08B5C;
+                flex:1 1 auto;
+               
+
+            }
+            .nav{
+                background: #C08B5C;
+                flex:5 1 auto;
+                
+
+            }
+            .social{
+                background: #C08B5C ;
+                flex:1 1 auto;
+                
+            }
+        .texto-principal{
+            background: #795458;
+        }
+            h1{
+                background: #453F78;
+            }
+    .section{
+    background: #000;
+    display: flex;
+    }
+        .articulos{
+            background: #A0153E;
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+
+        }
+            .article{
+                background: #FF204E;
+                flex: 1 1 40%;
+
+            }
+            .navegacion{
+                background: #00224D;
+                flex: 1 1 100%;
+            }
+        .aside{
+            background: #007F73;
+            flex: 1 1 auto;
+        }
+            .publicidad{
+                background: #4CCD99;
+            }
+
+    .footer{
+        background: #000;
+        display: flex;
+        justify-content: center;
+    }
+        .pie{
+            background: #378CE7;
+            width: 300px;
+
+        }
+@media all and (max-width: 800px){
+    .section{
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+        height: auto;
+    }
+    .aside{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 600px){
+    .articulos{
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 600px){
+        .aside{
+            flex-direction: column;
+        }
+}
