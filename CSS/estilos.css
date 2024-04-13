@@ -1,6 +1,6 @@
 *{
     margin: 0px;
-    padding: 10px;
+    padding: 0px;
     box-sizing: border-box;
 }
 body{
@@ -13,6 +13,10 @@ a{
 .padre{
     display: flex;
     flex-flow: column nowrap;
+}
+.margen-interno{
+    padding: 0 50px;
+    
 }
     .header{
     background: url(../img/img1.jpg);/*Esto de ../ nos ayuda a retroceder sobre un directorio*/
@@ -70,48 +74,127 @@ a{
                     color: #2dceff;
                 }
         .texto-principal{
-            background: #795458;
+            background: rgba(0,0,0,.5);
+            height: 500px;
+            display: flex;
+            align-items: center;
         }
             h1{
-                background: #453F78;
+                font-family: "Lora", serif;
+                font-size: 12px;
+                color: #fff;
+                font-weight: 300;
+                text-align: center;
+                line-height: 1.6;
             }
     .section{
-    background: #000;
+    background: #f7f7f7;
     display: flex;
     }
         .articulos{
-            background: #A0153E;
+            background: #f7f7f7;
             flex: 2 1 auto;
             display: flex;
             flex-flow: row wrap;
 
         }
-            .article{
-                background: #FF204E;
+          
+            .article{             
                 flex: 1 1 40%;
-
+                color: #e6dcdc;
+                font-size: 12px;
+                letter-spacing: 1;
+                margin: 10px 10px 0 0px;
+                flex: 1 1 45%;
+                background: #ececec;
+                
             }
+            .article img{
+                width: 100%;
+            }           
+            .article a{
+                color: #fff;
+                font-size: 13px;
+                padding: 10px ;
+                background: rgba(0,0,0,.5);
+                margin: 10px 0;
+                display: inline-block; /*Esto nos ayuda que la cajita se convierta en un boton*/
+            }
+            .article a:hover{
+                background-color: #000;
+                color: #2dceff;
+            }
+            h3{
+                color: #fff;
+                font-size: 13px;
+                padding: 10px 5px;
+                margin-top: -80px;
+            }
+            .article h3:hover{
+                color: #f6f945;
+            }
+            h2{
+                font-size: 25px;
+                text-transform: uppercase;/*LA OPCION UPPERCASE ES PARA PONER EL TITULO EN MAYUSCULA*/
+                padding: 0px 0 10px 0;             
+                color: #ffffff;
+            }
+            .article h2:hover{
+                color: #f6f945;
+            }
+            p{
+                color: gray;
+                
+            }
+           
             .navegacion{
-                background: #00224D;
-                flex: 1 1 100%;
+                background: #d9dce0;
+                flex: 1 1 100%;                           
+            }
+            .navegacion a{
+                color: #6f6c6c;
+                font-size: 11px;               
+                text-transform: uppercase;
+                padding: 0 10px;
+                letter-spacing: 2px;
+            }
+            .navegacion a:hover{
+                color: #dc1edc;
             }
         .aside{
-            background: #007F73;
+           /* background: #269bf5;*/
             flex: 1 1 auto;
+            margin: 10px 5px 10px 0;
+        }
+        .aside img{
+            width: 100%;
+        }
+        h4{
+            background: rgba(0,0,0,.1);
+            color: #fff;
+            padding: 10px;
+            text-transform: uppercase;
         }
             .publicidad{
-                background: #4CCD99;
+                background: #4ca2cd;
+                text-align: center;
             }
+            .publicidad h4:hover{
+                color: #fbff0b;
+            }
+           
 
     .footer{
-        background: #000;
-        display: flex;
+       display: flex;
         justify-content: center;
     }
         .pie{
-            background: #378CE7;
+            background: #d3d8de;
             width: 300px;
-
+        }
+        .pie a{
+            color: #000;           
+            font-family: "Lora", serif;        
         }
 @media all and (max-width: 800px){
     .section{
