@@ -19,47 +19,55 @@ a{
     
 }
     .header{
-    background: url(../img/img1.jpg);/*Esto de ../ nos ayuda a retroceder sobre un directorio*/
+    background: url(../img/e3.jpg);/*Esto de ../ nos ayuda a retroceder sobre un directorio*/
     background-position: center;/*Aqui le damos el aspecto que tendra la imagen*/
     background-attachment: contain;
     background-size: cover;
+   
 
     display: flex;
     flex-flow: column nowrap;
     }
         .menu{
-            background: rgba(0,0,0,.1);/* PONERLE COLOR NEGRO CON DEGRADE*/
+            background: rgba(255, 255, 255, 0.5);/* PONERLE COLOR NEGRO CON DEGRADE*/
             display: flex;
             flex-flow: row nowrap;
             height: 100px;
             align-items: center;
 
         }
-            .logo{
-                
-                flex:1 1 auto;
+            .logo{  
+                display: flex;
+                flex:5 1 auto; 
+                      
             }
                 .logo a{
-                    color: aliceblue;
-                    font-size: 30px;
-                  
+                    color: rgb(39, 41, 43);
+                    font-size: 30px; 
+                    margin-left: 110px;                           
                 }
                 .logo a:hover{
-                    color: #e5e912;
+                    color: #8e780e;
+                }
+                .logo img{
+                    width: 110px; /*Cambio el tamaño de la imagen*/                         
+                    float: left;
+                    flex-flow: row nowrap;     
+                    position: absolute;
                 }
             .nav{
           
                 flex:5 1 auto;              
             }
                 .nav a{
-                    color: aliceblue;
-                    font-size: 11px;
+                    color: a#7d1010;
+                    font-size: 12px;
                     text-transform: uppercase;
                     padding: 0 10px;
                     letter-spacing: 2px;
                 }
                 .nav a:hover{
-                    color: #e5e912;
+                    color: #840d0d;
                 }
             .social{
                 flex:1 1 auto; 
@@ -67,22 +75,37 @@ a{
             }
                 .social a{
                     font-size: 18px;
-                    color: aliceblue;
+                    color: rgb(5, 49, 87);
                     padding: 0 5px;
                 }
-                .social a:hover{
-                    color: #2dceff;
+                .facebook:hover{
+                    color: #00bbff;
                 }
+                .insta:hover{
+                    color: #f81808;
+                }
+                
+
         .texto-principal{
             background: rgba(0,0,0,.5);
             height: 500px;
-            display: flex;
-            align-items: center;
+            padding: 160px;
+            text-align: center;
         }
             h1{
                 font-family: "Lora", serif;
-                font-size: 12px;
+                font-style: italic;
+                font-size: 50px;
                 color: #fff;
+                font-weight: 300;
+                text-align: center;
+                line-height: 1.6;
+            }
+            .creciendo{
+                font-family: "Lora", serif;
+                font-size: 35px;
+                font-style: italic;
+                color: #faf5f5;
                 font-weight: 300;
                 text-align: center;
                 line-height: 1.6;
@@ -149,7 +172,8 @@ a{
            
             .navegacion{
                 background: #d9dce0;
-                flex: 1 1 100%;                           
+                flex: 1 1 100%;
+                margin: 10px 10px 0 0px;                           
             }
             .navegacion a{
                 color: #6f6c6c;
@@ -185,16 +209,21 @@ a{
            
 
     .footer{
+        background: rgba(0,0,0,.5);
        display: flex;
         justify-content: center;
     }
         .pie{
-            background: #d3d8de;
+            background: #111112;
             width: 300px;
         }
         .pie a{
-            color: #000;           
-            font-family: "Lora", serif;        
+            color: #fff;           
+            font-family: "Lora", serif;  
+            font-size: 11px;     
+            text-transform: uppercase; 
+            padding: 0 10px;
+            letter-spacing: 2px;
         }
 @media all and (max-width: 800px){
     .section{
