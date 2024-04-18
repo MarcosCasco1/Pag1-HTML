@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap);
 *{
     margin: 0px;
     padding: 0px;
@@ -93,11 +94,15 @@ header{
 
     /*AQUI SE DESGLOSA LA PARTE DEL MENU PRINCIPAL DE LA PAGINA*/
         .menu{
-            background: rgba(255, 255, 255, 0.5);/* PONERLE COLOR NEGRO CON DEGRADE*/
+            background: linear-gradient(45deg, hsl(238, 50%, 25%), #1bffff52); /* Degradado de color para el fondo */
             display: flex;
-            flex-flow: row nowrap;
-            height: 100px;
+            /*flex-flow: row nowrap;*/
+            height: 80px;
             align-items: center;
+            justify-content: center;
+            height: 80px;
+            padding: 0 20px; /* Añadir espaciado horizontal */
+            
 
         }
             .logo{  
@@ -114,45 +119,134 @@ header{
                     color: #8e780e;
                 }
                 .logo img{
-                    width: 110px; /*Cambio el tamaño de la imagen*/                         
-                    float: left;
-                    flex-flow: row nowrap;     
-                    position: absolute;
+                    display: block;
+                    width: 150px;
+                    height: auto;
+                    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+                    margin-left: -25px;
+                }
+                .logo img:hover{
+                    transform: scale(1.2); /* Escala la imagen al 110% del tamaño original */
+                    cursor: pointer; /* Cambia el cursor a una mano */
                 }
             .nav{
-                flex:5 1 auto; 
-                font-family: "Lora", serif;
-                
-               
-                          
+                position: relative;/*Cambia el color de fondo del entorno de la pantalla*/
+                width: auto;
+                height: 40px;
+                background: #222222b2;
+                border-radius: 8px;
+                display: flex;
+                justify-content: flex-start; /* Alinea la barra de navegación a la izquierda */
+                margin-left: auto;
+                align-items: center; /* Alinea verticalmente los elementos */
+                padding-left: 20px; /* Añade espacio a la izquierda */        
             }
                 .nav a{
-                    color: a#7d1010;
-                    font-size: 13px;
-                   
-                    text-transform: uppercase;
-                    padding: 0 10px;
-                    letter-spacing: 2px;
+                    position: relative;
+                    display: inline-block;
+                    font-size: 1em;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 0.8em;
+                    padding: 0 25px; /*Se ajusta el tamaño de la barra de navegacion*/
+                    z-index: 1;
+                    transform: scale(1.1);
                 }
-                .nav a:hover{
-                    color: #840d0d;
+                .nav span{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 95px;
+                    height: 100%;
+                    background: linear-gradient(45deg, #2e3192, #1bffff);
+                    border-radius: 8px;
+                    transition: .5s ease;
                 }
+                /*ESTO HACE QUE SE MUEVA LA TRANCISION POR LOS BOTONES*/
+                    nav a:nth-child(1):hover~span{
+                        left: 0;
+                    }
+                    nav a:nth-child(2):hover~span{
+                        left: 110px;
+                    }
+                    nav a:nth-child(3):hover~span{
+                        left: 220px;
+                        width: 100px;
+                    }
+                    nav a:nth-child(4):hover~span{
+                        left: 325px;
+                        width: 150px;
+                    }
+                    nav a:nth-child(5):hover~span{
+                        left: 470px;
+                        width: 120px;
+                    }
+                    nav a:nth-child(6):hover~span{
+                        left: 590px;
+                        width: 110px;
+                    }
+                    nav a:nth-child(7):hover~span{
+                        left: 710px;
+                        width: 140px;
+                    }
+                    nav a:nth-child(8):hover~span{
+                        left: 865px;
+                        width: 165px;
+                    }
+             /*AQUI ES LA PARTE DE LOS ICONOS   */
             .social{
-                flex:1 1 auto; 
-                display: flex; 
+                display: flex;
+                align-items: center;
+                justify-content: flex-end; /* Alinear los iconos de redes sociales hacia la derecha */
             }
-                .social a{
-                    font-size: 18px;
-                    color: rgb(5, 49, 87);
-                    padding: 0 5px;
-                }
-                .facebook:hover{
-                    color: #00bbff;
-                }
-                .insta:hover{
-                    color: #f81808;
-                }
-
+            .social a {
+                position: relative; /* Establece la posición relativa */
+                margin: 0 8px; /* Espacio entre los iconos de las redes sociales */
+                font-size: 24px;
+                color: #ffffff;
+                transition: color 0.3s, transform 0.3s; /* Transiciones suaves para el color y la escala */
+            }
+        
+            /* Efecto de escala al pasar el mouse */
+            .social a:hover {
+                transform: scale(1.2); /* Escala el icono al 130% del tamaño original */
+            }
+        
+            /* Cambio de color al pasar el mouse */
+            .social .facebook:hover {
+                color: #0a60bd; /* Cambia el color al pasar el mouse */
+            }
+        
+            .social .instagram:hover {
+                color: #e73e0b; /* Cambia el color al pasar el mouse */
+            }
+        
+            .social .whatsapp:hover {
+                color: #55e203; /* Cambia el color al pasar el mouse */
+            }
+        
+            /* Animación para el fondo cuadradito */
+            .social a::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                background-color: transparent;
+                border: 1px solid transparent;
+                border-radius: 10px; /* Ajusta el radio de las esquinas para hacerlas curveadas */
+                transition: width 0.3s, height 0.3s, background-color 0.3s;
+                transform: translate(-50%, -50%);
+            }
+        
+            /* Efecto de crecimiento y cambio de color al pasar el mouse */
+            .social a:hover::after {
+                width: 30px;
+                height: 30px;
+                background-color: rgba(223, 219, 219, 0.596); /* Cambia el color de fondo */
+                border-color: hsla(0, 0%, 0%, 0.192); /* Cambia el color del borde */
+            }
 
 
 /*ESTO SIRVE PARA TENER EL EFECTO WAVE: OSEA PONER LA OLA*/
