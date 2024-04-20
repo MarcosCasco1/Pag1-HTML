@@ -187,10 +187,10 @@ header{
                     }
                     nav a:nth-child(7):hover~span{
                         left: 710px;
-                        width: 140px;
+                        width: 115px;
                     }
                     nav a:nth-child(8):hover~span{
-                        left: 865px;
+                        left: 825px;
                         width: 165px;
                     }
              /*AQUI ES LA PARTE DE LOS ICONOS   */
@@ -244,7 +244,7 @@ header{
             .social a:hover::after {
                 width: 30px;
                 height: 30px;
-                background-color: rgba(223, 219, 219, 0.596); /* Cambia el color de fondo */
+                background-color: rgba(255, 255, 255, 0.038); /* Cambia el color de fondo */
                 border-color: hsla(0, 0%, 0%, 0.192); /* Cambia el color del borde */
             }
 
