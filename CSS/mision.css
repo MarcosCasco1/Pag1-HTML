@@ -65,12 +65,14 @@ a{
             .nav ul{
                 list-style: none;
                 padding: 0 10px;
+                z-index: 2;
             }
             .nav ul li{
                 display: inline-block;
                 position: relative;
                 transition: .3s linear;
                 z-index: 1000;
+               
             }
             .nav ul li:hover{
                 transform: scale(1.1);
@@ -94,6 +96,7 @@ a{
             .nav ul li:hover .hijos{
                 display: block;
                 background-color: hsla(224, 73%, 20%, 0.89);
+                
             }
             .nav .submenu .hijos{
                 display: none;
@@ -101,16 +104,20 @@ a{
                 position: absolute;
                 width: 140%;
                 margin-top: 5px;
+                left: 0; /* Ajusta la posición del submenú */
+                
                
             }
             .nav .submenu .hijos li{
                 display: block;
                 overflow: hidden;
                 border-bottom: none;
+                z-index: 2;
             }
             .nav .submenu .hijos li a{
                 display: block;
                 text-align: left; 
+                z-index: 2;
             }
             
 .misionvideo {
@@ -131,21 +138,28 @@ text-shadow: 2px 2px 4px #000000;
 font-weight: 800;
 text-align: center;
 text-transform: uppercase;
-margin-top: 0px; /* Ajustar el margen superior */
+margin-top: -100px; /* Ajustar el margen superior */
 }
 .misionvideo h1:hover{
-    color: #f7d309;
+    color: #02ddff;
     text-shadow: 2px 2px 4px #000000;
+    transform: translateY(-10px); /* Efecto de elevación */
 }
 
 .misionvideo p{
 font-size: 25px;
-color: aliceblue;
-text-shadow: 2px 2px 4px #000000;
-font-weight: 800;
+color: rgb(2, 21, 34);
+text-shadow: 2px 2px 4px #ffffff;
+font-weight: 700;
 justify-content: space-between;
 width: 100%;
-margin-top: 60px; /* Agregar margen superior */
+margin-top:200px; /* Agregar margen superior */
+text-align: center;
+}
+.misionvideo p:hover{
+    color: #012451;
+    text-shadow: 2px 2px 4px #ffffff;
+    transform: translateY(-10px); /* Efecto de elevación */
 }
 
 #mision {
@@ -164,7 +178,7 @@ video{
     left: 0;
     width: 100%;
     height: 100%;
-   
+    background: #1c1c1d;
     opacity: 0.5;
     mix-blend-mode: overlay;
 }
@@ -191,7 +205,7 @@ button:hover {
 }
 .wave{
     position: absolute;
-    bottom: 190px;
+    bottom: 235px;
     left: -0px;
     width: 100%;
     z-index: 1;

@@ -50,3 +50,4 @@ tabInputs.forEach(function(input){
         thisSwiper.swiper.update();
     })
 });
+
