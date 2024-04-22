@@ -20,8 +20,8 @@ a{
     
 }
     .header{
-    background: url(../img/e3.jpg);/*Esto de ../ nos ayuda a retroceder sobre un directorio*/
-    background-position: center;/*Aqui le damos el aspecto que tendra la imagen*/
+    background: url(../img/agencias/danli/Danlí-1.jpg);/*Esto de ../ nos ayuda a retroceder sobre un directorio*/
+    background-position: center bottom;/*Aqui le damos el aspecto que tendra la imagen*/
     background-attachment: contain;
     background-size: cover;
    
@@ -124,7 +124,7 @@ a{
             h1{
                 font-family: "Lora", serif;
                 font-style: italic;
-                font-size: 50px;
+                font-size: 65px;
                 color: #fff;
                 text-shadow: 2px 2px 4px #000000;
                 font-weight: 800;
@@ -132,7 +132,7 @@ a{
                 line-height: 1.6;
             }
             h1:hover{
-                color: #00b7ff;
+                color: #fffb00;
                 text-shadow: 2px 2px 4px #0a0a0a;
             }
             .creciendo{
@@ -141,12 +141,12 @@ a{
                 font-style: italic;
                 color: #faf5f5;
                 text-shadow: 2px 2px 4px #000000;
-                font-weight: 500;
+                font-weight: 800;
                 text-align: center;
                 line-height: 1.6;
             }
             .creciendo:hover{
-                color: #00b7ff;
+                color: #fffb00;
                 text-shadow: 2px 2px 4px #0a0a0a;
             }
     .section{
@@ -318,7 +318,7 @@ a{
 /*MODIFICACION DEL FOOTER*/
 .wave2{
     position: absolute;
-    bottom: -980px;
+    bottom: -1963px;
     left: -0px;
     width: 100%;
    
@@ -327,7 +327,7 @@ a{
     padding: 50px 60px;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(to bottom, rgba(0, 104, 179, 0.686), rgb(63, 147, 251));
+    background: linear-gradient(to bottom, rgba(0, 32, 102, 0.686), rgb(63, 147, 251));
     
 }
 /*ESTO SIRVE PARA TENER EL EFECTO WAVE: OSEA PONER LA OLA*/

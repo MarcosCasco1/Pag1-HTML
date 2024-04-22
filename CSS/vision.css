@@ -20,12 +20,14 @@ a{
     
 }
     .header{
+    background: url(../img/e3.jpg);/*Esto de ../ nos ayuda a retroceder sobre un directorio*/
     background-position: center;/*Aqui le damos el aspecto que tendra la imagen*/
     background-attachment: contain;
     background-size: cover;
+   
+
     display: flex;
     flex-flow: column nowrap;
-    z-index: 2;
     }
         .menu{
             background: linear-gradient(to bottom, rgba(151, 170, 253, 0.699), rgb(1, 27, 34));
@@ -33,13 +35,13 @@ a{
             flex-flow: row nowrap;
             height: 60px;
             align-items: center;
-            z-index: 2;
+          
 
         }
             .logo{  
                 display: flex;
                 flex:3 1 auto; 
-                      
+                z-index: 2;      
             }
             .logo{
                 float: left;
@@ -53,7 +55,8 @@ a{
             }
             .nav{
           
-                flex:5 1 auto;              
+                flex:5 1 auto; 
+                z-index: 2;             
             }
             .nav{
                 float: right;
@@ -65,14 +68,12 @@ a{
             .nav ul{
                 list-style: none;
                 padding: 0 10px;
-                z-index: 2;
             }
             .nav ul li{
                 display: inline-block;
                 position: relative;
                 transition: .3s linear;
                 z-index: 1000;
-               
             }
             .nav ul li:hover{
                 transform: scale(1.1);
@@ -96,28 +97,25 @@ a{
             .nav ul li:hover .hijos{
                 display: block;
                 background-color: hsla(224, 73%, 20%, 0.89);
-                
             }
             .nav .submenu .hijos{
                 display: none;
-                background: linear-gradient(to bottom, hsla(187, 100%, 7%, 0.192), hsla(193, 98%, 50%, 0.473));
+                background: linear-gradient(to bottom, hsla(187, 100%, 7%, 0.107), hsla(193, 98%, 50%, 0.189));
+                opacity: 0.8;
                 position: absolute;
                 width: 140%;
                 margin-top: 5px;
-                left: 0; /* Ajusta la posición del submenú */
-                
+                z-index: 2;
                
             }
             .nav .submenu .hijos li{
                 display: block;
                 overflow: hidden;
                 border-bottom: none;
-                z-index: 2;
             }
             .nav .submenu .hijos li a{
                 display: block;
                 text-align: left; 
-                z-index: 2;
             }
             
 .visionvideo {
