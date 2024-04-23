@@ -149,6 +149,99 @@ a{
                 color: #fffb00;
                 text-shadow: 2px 2px 4px #0a0a0a;
             }
+
+ /* Agrega un margen vertical entre las secciones */
+ .section {
+    margin: 80px 0; /* Ajusta el valor según el espacio que desees entre secciones */
+}
+
+
+/*AGREGADO UN SLIDE DE FOTOS SOBRE LA AGENCIA*/
+.slider-container{
+    width: 100%;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-images{
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+.slider-images img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+.slider-img{
+    width: 110px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: 0,7 ease;
+   
+}
+.slider-images .slider-img:first-child, .slider-images .slider-img:last-child{
+        height: 480px;
+
+}
+.slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(6){
+    height: 560px;
+    
+}
+.slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4), .slider-images .slider-img:nth-child(5){
+    height: 665px;
+    
+}
+.slider-container h2{
+    font-family: "Lora", serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    color: #1c1b1b;
+    position: absolute;
+    top: 50%;
+    left:-10%;
+    transform: rotate(270deg);
+    transition: 0.7s ease;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+
+}
+.details{
+    position: absolute;
+    bottom: 43px;
+    left: 40px;
+}
+.details h3,
+.details p {
+    font-family: "Lora", serif;
+    font-size: 16px; /* Cambia el tamaño según sea necesario */
+    font-weight: 500;
+    text-align: left;
+    color: #000;
+    text-transform: uppercase;
+    transition: 0.7s ease;
+    display: none;
+}
+.slider-img.active{
+    width: 766px !important;
+    height: 750px !important;
+}
+.slider-img.active h2{
+    display: none;
+}
+.slider-img.active  .details p, .slider-img.active  .details h3 {
+    display: block;
+}
+
+
     .section{
     background: #f7f7f7;
     display: flex;
@@ -166,7 +259,7 @@ a{
                 color: #e6dcdc;
                 font-size: 12px;
                 letter-spacing: 1;
-                margin: 10px 10px 0 0px;
+                margin: 10px 10px 70px 0px;
                 flex: 1 1 45%;
                 background: #ececec;
                 
@@ -224,28 +317,9 @@ a{
             .navegacion a:hover{
                 color: #dc1edc;
             }
-        .aside{
-           /* background: #269bf5;*/
-            flex: 1 1 auto;
-            margin: 10px 5px 10px 0;
-        }
-        .aside img{
-            width: 100%;
-        }
-        h4{
-            background: rgba(0,0,0,.1);
-            color: #fff;
-            padding: 10px;
-            text-transform: uppercase;
-        }
-            .publicidad{
-                background: #4ca2cd;
-                text-align: center;
-            }
-            .publicidad h4:hover{
-                color: #fbff0b;
-            }
+
            
+       
             .redes-sociales{
                 display: flex;
                 align-items: center;

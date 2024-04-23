@@ -51,3 +51,5 @@ tabInputs.forEach(function(input){
     })
 });
 
+//CODIGO PARA LA SLIDER DE DANLI
+

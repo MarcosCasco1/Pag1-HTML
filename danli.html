@@ -16,6 +16,9 @@
 
      <!--LINK PARA AGREGAR LA LIBRERIA DE ICONOS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-wP2m3D9BU5QV28qLniWOxC2L2eKDMY5Egy5WH1llKOAdSoZ/YhuBs3Fk8rwCpWG0DYYW1QCWacBcRsRhVgE0jg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--LINK DE LA LIBRERIA DE CSS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+     </script>
 </head>
 <body>
     <div class="padre">
@@ -67,6 +70,68 @@
              </svg>
             </div>
         </header>
+        <section class="slider-container">
+            <div class="slider-images">
+                <div class="slider-img">
+                    <img src="img/Compañeros/2-1.jpg" alt="1">
+                    <h2>Lic. Donal</h2>
+                    <div class="details">
+                        <h3>Amahel</h3>
+                        <p>Licenciado en</p>
+                    </div>
+                </div>
+                <div class="slider-img">
+                    <img src="img/Compañeros/2-17.jpg" alt="2">
+                    <h2>Lic. Donal</h2>
+                    <div class="details">
+                        <h3>Amahel</h3>
+                        <p>Licenciado en</p>
+                    </div>
+                </div>
+                <div class="slider-img">
+                    <img src="img/Compañeros/2-29.jpg" alt="3">
+                    <h2>Lic. Donal</h2>
+                    <div class="details">
+                        <h3>Amahel</h3>
+                        <p>Licenciado en</p>
+                    </div>
+                </div>
+                <div class="slider-img active">
+                    <img src="img/Compañeros/2-3.jpg" alt="4">
+                    <h2>Lic. Donal</h2>
+                    <div class="details">
+                        <h3>Amahel</h3>
+                        <p>Licenciado en</p>
+                    </div>
+                </div>
+                <div class="slider-img">
+                    <img src="img/Compañeros/2-31.jpg" alt="5">
+                    <h2>Lic. Donal</h2>
+                    <div class="details">
+                        <h3>Amahel</h3>
+                        <p>Licenciado en</p>
+                    </div>
+                </div>
+                <div class="slider-img">
+                    <img src="img/Compañeros/2-35.jpg" alt="6">
+                    <h2>Lic. Donal</h2>
+                    <div class="details">
+                        <h3>Amahel</h3>
+                        <p>Licenciado en</p>
+                    </div>
+                </div>
+                <div class="slider-img">
+                    <img src="img/Compañeros/2-7.jpg" alt="7">
+                    <h2>Lic. Donal</h2>
+                    <div class="details">
+                        <h3>Amahel</h3>
+                        <p>Licenciado en</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <section class="section margen-interno">
             <div class="articulos">
                 <article class="article">
@@ -83,23 +148,19 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis dolorum unde facilis asperiores, commodi itaque veritatis deserunt. Quia enim fugit iusto, harum non nostrum doloremque porro laudantium quasi unde odit.</p>  
                     <a href="#">Leer más...</a>
                 </article>
-                <article class="article">
-                    <img src="img/Equipo2.jpg" alt="">
-                    <h3>13 de abril del 2024</h3>
-                    <h2>Solidaridad</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis dolorum unde facilis asperiores, commodi itaque veritatis deserunt. Quia enim fugit iusto, harum non nostrum doloremque porro laudantium quasi unde odit.</p>
-                    <a href="#">Leer más...</a>
-                </article>
+                
                 
             </div>
            
         </section>
+
         <Section>
             <iframe class="map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9930.423643116555!2d-86.57438558171032!3d14.028651516367113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6e682d6789a60b%3A0x74cdede2bb676116!2zRGFubMOtLCBFbCBQYXJhw61zbw!5e0!3m2!1ses-419!2shn!4v1713471153047!5m2!1ses-419!2shn"
                 width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </Section>
+
     <section class="ola2">
         <div class="wave2" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-4.22,76.48 C149.99,150.00 271.49,-49.98 505.92,74.52 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: rgb(255, 255, 255);"></path></svg>
         </div>
@@ -135,5 +196,14 @@
         
     </footer>
     </div>
+    <script src="jquery.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+    $('.slider-img') .on('click', function() {
+        $('.slider-img').removeClass('active');
+        $(this).addClass('active');
+    });
+});
+</script>
 </body>
 </html>
