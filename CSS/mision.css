@@ -25,20 +25,21 @@ a{
     background-size: cover;
     display: flex;
     flex-flow: column nowrap;
-    z-index: 2;
+   
     }
-        .menu{
+        .menu .interior{
             background: linear-gradient(to bottom, rgba(151, 170, 253, 0.699), rgb(1, 27, 34));
             display: flex;
             flex-flow: row nowrap;
             height: 60px;
             align-items: center;
-            z-index: 2;
+            
 
         }
             .logo{  
                 display: flex;
                 flex:3 1 auto; 
+                z-index: 2;      
                       
             }
             .logo{
@@ -56,6 +57,7 @@ a{
                 flex:5 1 auto;              
             }
             .nav{
+                background: linear-gradient(to bottom, rgba(151, 170, 253, 0.699), rgb(1, 27, 34));
                 float: right;
                 display: flex;
                 align-items: center;
@@ -147,19 +149,19 @@ margin-top: -100px; /* Ajustar el margen superior */
 }
 
 .misionvideo p{
-font-size: 25px;
+font-size: 20px;
 color: rgb(2, 21, 34);
 text-shadow: 2px 2px 4px #ffffff;
-font-weight: 700;
+font-weight: 500;
 justify-content: space-between;
-width: 100%;
+width:100%;
 margin-top:200px; /* Agregar margen superior */
 text-align: center;
 }
 .misionvideo p:hover{
     color: #012451;
     text-shadow: 2px 2px 4px #ffffff;
-    transform: translateY(-10px); /* Efecto de elevación */
+    transform: translateX(-10px); /* Efecto de elevación */
 }
 
 #mision {
@@ -205,7 +207,7 @@ button:hover {
 }
 .wave{
     position: absolute;
-    bottom: 235px;
+    bottom: 180px;
     left: -0px;
     width: 100%;
     z-index: 1;

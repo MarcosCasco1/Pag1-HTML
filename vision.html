@@ -34,7 +34,7 @@
                           <li class="submenu">
                             <a href="#" target="blank">Agencias</a>
                             <ul class="hijos">
-                                <a href="">Danlí</a></li>
+                                <a href="danli.html">Danlí</a></li>
                                 <li><a href="">El Paraíso</a></li>
                                 <li><a href="">Comayagua</a></li>
                                 <li><a href="">Siguatepeque</a></li>   
@@ -50,20 +50,20 @@
             </div>
                 
              
-    <div class="wave" style="height: 150px; overflow: hidden;">
-        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-            <defs>
-                <linearGradient id="gradiente-wave" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#ffee00cc;stop-opacity:1" />
-                </linearGradient>
-            </defs>
-            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: url(#gradiente-wave);"></path>
-        </svg>
-    </div>
+            <div class="wave" style="height: 150px; overflow: hidden;">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <defs>
+                        <linearGradient id="gradiente-wave" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ffee00;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: url(#gradiente-wave);"></path>
+                </svg>
+            </div>
     
-            </header>
+        </header>
 
         <div class="visionvideo">
             <h1> Nuestra visión</h1>
@@ -71,7 +71,7 @@
                 finanzas; satisfaciendo las necesidades de los clientes, velando por la 
                 correcta inversión del capital, que constituye al desarrollo del país, con 
                 personas confiable y altamente capacitado”.</p>
-                <button type="button">Regresar</button>
+                <button type="button" id="regresarButton">Regresar</button>
         </div>
         <video muted autoplay loop>
             <source src="videos/vision.mp4" type="video/mp4">
@@ -80,5 +80,11 @@
 
     </main>
 </div>
+<script src="scrip.js"></script>
+<script>
+    document.getElementById("regresarButton").addEventListener("click", function() {
+    window.history.back();
+  });
+</script>
 </body>
 </html>
