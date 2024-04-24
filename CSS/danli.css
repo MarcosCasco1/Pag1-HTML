@@ -180,23 +180,28 @@ a{
     object-fit: cover;
 }
 .slider-img{
-    width: 110px;
+    width: 50px;
     border-radius: 6px;
     cursor: pointer;
     position: relative;
-    transition: 0,7 ease;
+    /*transition: 0,7 ease;*/
+    transition: transform 0.3s ease; /* Añade una transición suave */
+    overflow: hidden; /* Evita que el contenido circundante se desborde */
    
 }
+.slider-img:hover {
+    transform: scale(1.1); /* Escala la imagen al 110% al pasar el mouse sobre ella */
+}
 .slider-images .slider-img:first-child, .slider-images .slider-img:last-child{
-        height: 480px;
+        height: 380px;
 
 }
 .slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(6){
-    height: 560px;
+    height: 460px;
     
 }
 .slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4), .slider-images .slider-img:nth-child(5){
-    height: 665px;
+    height: 565px;
     
 }
 .slider-container h2{
@@ -205,10 +210,11 @@ a{
     font-weight: 700;
     text-align: left;
     text-transform: uppercase;
-    color: #1c1b1b;
+    color: #28cdff;
+    text-shadow: 2px 2px 4px #070707;
     position: absolute;
     top: 50%;
-    left:-10%;
+    left:-100%;
     transform: rotate(270deg);
     transition: 0.7s ease;
     white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
@@ -219,20 +225,26 @@ a{
     bottom: 43px;
     left: 40px;
 }
+.details .h3don{
+    color: gainsboro;
+}
+.details .parra{
+    color: gainsboro;
+}
 .details h3,
 .details p {
     font-family: "Lora", serif;
     font-size: 16px; /* Cambia el tamaño según sea necesario */
     font-weight: 500;
     text-align: left;
-    color: #000;
+    color: #111010;
     text-transform: uppercase;
     transition: 0.7s ease;
     display: none;
 }
 .slider-img.active{
-    width: 766px !important;
-    height: 750px !important;
+    width: 650px !important;
+    height: 600px !important;
 }
 .slider-img.active h2{
     display: none;
@@ -392,7 +404,7 @@ a{
 /*MODIFICACION DEL FOOTER*/
 .wave2{
     position: absolute;
-    bottom: -1963px;
+    bottom: -1943px;
     left: -0px;
     width: 100%;
    
