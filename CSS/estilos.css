@@ -247,84 +247,6 @@ a{
                 color: #fbff0b;
             }
            
-            .redes-sociales{
-                display: flex;
-                align-items: center;
-                justify-content: center; /* Alinear los iconos de redes sociales hacia la derecha */
-                margin-right: 10px;
-                }
-                .redes-sociales{
-                position: relative; /* Establece la posición relativa */
-                margin: 0 40px; /* Espacio entre los iconos de las redes sociales */
-                font-size: 24px;
-                color: #dedede;
-                transition: color 0.3s, transform 0.3s; /* Transiciones suaves para el color y la escala */
-               
-                }
-                .facebook{
-                    margin: 0px 15px;
-                    color: #0a74ee;
-                }
-                .instagram{
-                    margin: 0px 5px;
-                    color: #db1e05;
-                }
-                .whatsapp{
-                    margin: 0px 15px;
-                    color: #01b534;
-                }
-            
-                /* Efecto de escala al pasar el mouse */
-                .redes-sociales a:hover {
-                transform: scale(1.3); /* Escala el icono al 130% del tamaño original */
-               
-                
-                }
-            
-                /* Cambio de color al pasar el mouse */
-                .redes-sociales .facebook:hover {
-                color: #1684fa; /* Cambia el color al pasar el mouse */
-                }
-            
-                .redes-sociales .instagram:hover {
-                color: #f10505; /* Cambia el color al pasar el mouse */
-                }
-            
-                .redes-sociales .whatsapp:hover {
-                color: #55e203; /* Cambia el color al pasar el mouse */
-                }
-            
-                /* Animación para el fondo cuadradito */
-                .redes-sociales a::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 0;
-                height: 0;
-                background-color: transparent;
-                border: 1px solid transparent;
-                border-radius: 10px; /* Ajusta el radio de las esquinas para hacerlas curveadas */
-                transition: width 0.3s, height 0.3s, background-color 0.3s;
-                transform: translate(-50%, -50%);
-                }
-            
-                /* Efecto de crecimiento y cambio de color al pasar el mouse */
-                .redes-sociales a:hover::after {
-                width: 30px;
-                height: 30px;
-                background-color: rgba(5, 92, 133, 0.418); /* Cambia el color de fondo */
-                border-color: hsla(0, 0%, 0%, 0.192); /* Cambia el color del borde */
-                }
-/*MODIFICACION DEL FOOTER*/
-.wave2{
-    position: absolute;
-    bottom: -980px;
-    left: -0px;
-    width: 100%;
-   
-} 
-
 
 /*ESTO SIRVE PARA TENER EL EFECTO WAVE: OSEA PONER LA OLA*/
 .wave{
@@ -337,20 +259,21 @@ a{
 /*AQUI SE COMIENZA A HACER EL FOOTER*/
 footer{
     background: linear-gradient(to right, #002454, #0077FF);
-    position: relative;
+    position: absolute;
     width: 100%;
-    min-height: 400px;
+    min-height: 100px;
     padding: 3rem 1rem;
 }
 .container {
    max-width: 1200px;
-   margin: 40px auto;
+   margin: 30px auto;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
 
 }
+
 .row{
    margin-top: 50px;
    display: flex;
@@ -364,22 +287,22 @@ footer{
    font-family: poppins;
    padding:0 2rem;
 }
-.col .logo{
-   width: 200px;
-   margin-bottom:25px; 
-   position: absolute; /* Cambiar a posicionamiento absoluto */
-   top: 20px; /* Colocar en la esquina superior */
-   left: 55px;
-   cursor: pointer;
-}
-.logo img {
+.col .logo2{
     width: 200px;
-    margin-bottom: 25px;
-    transition: transform 0.3s ease; /* Agregar una transición para una animación suave */
-  }
-.logo img:hover{
-    transform: scale(1.1);
-}
+    margin-bottom:25px; 
+    position: absolute; /* Cambiar a posicionamiento absoluto */
+    top: 20px; /* Colocar en la esquina superior */
+    left: 55px;
+    cursor: pointer;
+ }
+ .logo2 img {
+     width: 200px;
+     margin-bottom: 25px;
+     transition: transform 0.3s ease; /* Agregar una transición para una animación suave */
+   }
+ .logo2 img:hover{
+    transform: translateX(8px);
+ }
 .col p{
     color: #ffffff;
     text-align: justify;
@@ -396,7 +319,7 @@ footer{
    content: '';
    height:3px;
    width:0px;
-   background-color: rgb(1, 183, 255);
+   background-color: rgb(247, 255, 1);
    position: absolute;
    bottom: 0;
    left:0;
@@ -413,6 +336,10 @@ footer{
    position: relative;
    cursor: pointer;
 }
+.contact-info .numero:hover{
+   color: rgb(242, 254, 6);
+   transform: translateX(8px);
+}
 
 .col .social a i{
    color:rgb(255, 255, 255);
@@ -421,6 +348,7 @@ footer{
    margin-right: 15px;
    transition: 0.3s ease;
 }
+
 .col .social a i:hover{
    transform: scale(1.9);
    filter:grayscale(25);
@@ -457,7 +385,6 @@ footer{
    color:#ffffff;
    margin-bottom: -10px;
    font-size: 16px;
- 
 }
 
 .row .form{
@@ -483,31 +410,14 @@ footer{
    border-bottom-left-radius: 0;
    background-color: rgb(7, 197, 249);
 }
-
-/********** Responsive Design ********/
-@media(max-width:900px)
-{
- .row{
-   flex-direction: column;
- }
- .col{
-   width: 100%;
-   text-align: left;
-   margin-bottom: 25px;
- }
-}
-@media(max-width:768px)
-{
- .row{
-   flex-direction: column;
- }
- .col{
-   width: 100%;
-   text-align: left;
-   margin-bottom: 20px;
- }
-}
-
+.form button i.fa-paper-plane:hover {
+    transform: scale(1.4); /* Agranda la escala al pasar el mouse */
+    color: #ffdd00; /* Cambia el color al pasar el mouse */
+  }
+  .form button:hover{
+    transform: scale(1.2); /* Agranda la escala al pasar el mouse */
+    color: #ffdd00; /* Cambia el color al pasar el mouse */
+  }
 
 
 @media all and (max-width: 800px){
@@ -534,4 +444,57 @@ footer{
         .aside{
             flex-direction: column;
         }
+}
+/********** Responsive Design ********/
+@media(max-width:800px)
+{
+ .row{
+   flex-direction: column;
+ }
+ .logo2{
+    display: none;
+  
+ }
+ .col{
+   width: 100%;
+   text-align: center;
+   margin-bottom: 25px;
+ }
+}
+@media(max-width:768px)
+{
+    .social{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+ .row{
+   flex-direction: column;
+   margin-top: 25px;
+ }
+ .col{
+   width: 100%;
+   text-align: center;
+   margin-bottom: 40px;
+ }
+ .col .contac{
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 100px;
+ }
+.contact-details1 p{
+    width: 100%;
+    text-align: center;
+}
+.contact-info {
+    display: flex;
+    justify-content: center;
+ 
+  }
+
+.contact-info .numero{
+    text-align:center; 
+    margin-left: -20px;
+}
 }
