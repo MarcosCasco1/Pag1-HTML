@@ -7,8 +7,9 @@
     <title>Contactos</title>
     <!--CREACION DE LA PAGINA DE CONTACTOS-->
     <link rel="stylesheet" href="CSS/contactos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+   <!--LINK DE LAS FUENTES DE LETRA-->
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+      
          <!--LINK PARA LLAMAR A LOS ICONOS DE LAS REDES SOCIALES-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -16,48 +17,98 @@
 <body>
 
     <div class="padre">
-    <header>       
-            <div class="menu margen-interno">
-                <div class="logo">   
-                    <div class="imglogo">
-                        <img src="img/LOGO MI PYME VEC 06-07-22.png" alt="img">
-                    </div>                                   
-                </div>
-                <nav class="nav"> 
-                    <a href="#">Inicio</a>
-                    <a href="#">Acerca de</a>
-                    <a href="#">servicios</a>
-                    <a href="#">Equipo Mi Pyme</a>
-                    <a href="#">Novedades</a>
-                    <a href="#">Agencias</a>
-                    <a href="#">Contacto</a>
-                    <a href="#">Mi cartera personal</a>
-                    <span> </span>
-                </nav>
-                <div class="social">
-                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <section class="textos-header">
-                    <h1>Potencia tus ventas al menos en un 200%</h1>
-                    <h2>Con una pagina potente</h2>
-                   </section>
+        <header class="header">
+            <header class="header2">
+    
+                <div class="logo"><a href=""><img src="img/LOGO MI PYME VEC 06-07-22.png" alt="Logo de la Empresa"></a></div>
+                <input type="checkbox" id="toggle">
+                <label for="toggle"> <img class="menu" src="menu.svg" alt="menu"></label>
+        
+        
+                    <nav class="navigation">
+        
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="#">Acerca de</a>
+                                <ul>
+                                    <li><a href="mision.html">Mision</a></li>
+                                    <li><a href="vision.html">Vision</a></li>
+                                    <li><a href="Valores.html">Valores</a></li>
+                                    <li><a href="#">Nuestros Clientes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Equipo Mi Pyme</a></li>
+                            <li><a href="#">Novedades</a></li>
+                            <li><a href="agencias.html">Agencias</a>
+                                <ul>
+                                    <li><a href="danli.html">Danlí</a></li>
+                                    <li><a href="#">Comayagua</a></li>
+                                    <li><a href="#">Siguatepeque</a></li>
+                                    <li><a href="#">Intibucá</a></li>
+                                    <li><a href="#">El Paraíso</a></li>
+                                    <li><a href="#">Santa Rosa De Copán</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="Contactos.html">Contacto </a></li>
+                            <li><a href="#">Mi cartera Personal</a></li>
+        
+                        </ul>
+                        
+                    </nav>
+            </header>
+        
+            <section class="textos-header">
+                <h1>Potencia tus ventas al menos en un 200%</h1>
+                <h2>Con una pagina potente</h2>
+               </section>
+          <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+              style="height: 100%; width: 100%;">
+              <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                  style="stroke: none; fill: rgb(255, 255, 255);"></path>
+           </svg>
+          </div>
+        </header>
+
+
+        <section class="contacto-seccion">
+            <h2 class="titulo-principal">Contáctate con nosotros</h2> <!-- Título principal fuera del cuadro -->
+            <div class="contacto-contenedor">
+              <div class="contacto-info">
+                <img src="img/contrataciones.jpeg" alt="Imagen de contacto">
+                <p>Información de contacto:</p>
+                <p>Teléfono: +(504) 2763-2042</p>
+                <p>Correo electrónico: rrhh@mipymefinanciero.net </p>
+              </div>
+              <div class="formulario">
+                <form action="enviar_correo.php" method="POST">
+                  <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="telefono">Número de Celular:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" name="ciudad" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" rows="5" required></textarea>
+                  </div>
+                  <button type="submit">Enviar Correo</button>
+                  <a href="https://wa.me/50499982449text=Hola,%20te%20envío%20un%20mensaje%20desde%20el%20formulario%20de%20contacto" class="whatsapp-btn">Enviar por WhatsApp</a>
+                </form>
+              </div>
             </div>
-            <!---->
-           
-    </div>       
-         </div>
-           
-            <!--AGREGANDO LA CLASE WAVE PARA DEFINIR EL TAMAÑO DE LA OLA-->
-            <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                style="height: 100%; width: 100%;">
-                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: rgb(255, 255, 255);"></path>
-             </svg>
-            </div>
-    </header>
+          </section>
+          
     <main>
         <section class="contenedor sobre-nosotros">
             <h2 class="titulo">Nuestros Creditos</h2>
@@ -141,7 +192,7 @@
             </div>
             </div>
         </section>
-        <section class="clientes contenedor">
+        <!--<section class="clientes contenedor">
             <h2 class="titulo">Que dicen nuestros clientes</h2>
             <div class="card">
                 <img src="img/e5.jpg" alt="">
@@ -161,8 +212,8 @@
                         eveniet. Fuga, eum quasi.</p>
                 </div>
             </div>
-        </section>
-        <section class="servicios">
+        </section>-->
+       <!--<section class="servicios">
             <div class="contenedor">
                 <h2 class="titulo">NUESTROS SERVICIOS</h2>
                 <div class="servicio-cont">
@@ -189,25 +240,61 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
     </main>
-    <footer>
-        <div class="contenedor-footer">
-            <div class="content-foo">
-                <h4>Telefono</h4>
-                <p>99982449</p>
+     <!--CREACION DEL FOOTER-->
+     <section>
+        <footer>
+
+            <div class="container__footer">
+                <div class="box__footer">
+                    <div class="logo">
+                        <img src="img/LOGO MI PYME VEC 06-07-22.png" alt="">
+                    </div>
+                    <div class="terms">
+                        <p class="terms1">“Somos una empresa responsable, que se dedica a impulsar el crecimiento sostenible de las pequeñas empresas"</p>
+                    </div>
+                </div>
+                <div class="box__footer">
+                    <h2>Contáctanos y solicita ya tu crédito <br> en la agencia más cercana</h2>
+                    <a href="tel:27632042">Planta Principal</a>
+                    <a href="https://wa.me/50431591245">Agencia Danlí</a>
+                    <a href="https://wa.me/50433105369">Agencia Comayagua</a>
+                    <a href="https://wa.me/50431881005">Agencia Siguatepeque</a>
+                    <a href="https://wa.me/50431560020">Agencia Intibucá</a>
+                    <a href="https://wa.me/50487597908">Agencia El Paraíso</a>
+                    <a href="https://wa.me/50487849995">Agencia Santa Rosa De Copán</a>
+                </div>
+    
+                <div class="box__footer">
+                    <h2>Contacto</h2>
+                    
+                                       <p class="locacion">Danli, El Paraiso, <br> Honduras <br> <br>+(504) 2763-2042
+                                    </p>           
+                </div>
+    
+                <div class="box__footer">
+                    <h2>Redes Sociales</h2>
+                    <a href="https://www.facebook.com/mipymefinancierohn"> <i class="fab fa-facebook-square"></i>Facebook</a>
+                    <a href="https://wa.me/50431731085?text=Me%20interesa%20su%20servicio"><i class="fab fa-whatsapp"></i>Whatsaap</a>
+                    <a href="https://hn.linkedin.com/company/mi-pyme-financiero-s-de-r-l-de-c-v"><i class="fab fa-linkedin"></i>Linkedin </a>
+                    <a href="https://instagram.com/mipymefinanciero?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram-square"></i> Instagram</a>
+                </div>
+    
             </div>
-            <div class="content-foo">
-                <h4>Correo</h4>
-                <p>Marco.salgado@upg.edu.hn</p>
+    
+            <div class="box__copyright">
+                <br>
+                <hr>
+                
+                <p class="copyright text-center">Todos los derechos Reservados. &copy; <script>
+                    document.write(new Date().getFullYear())
+                </script> Mi Pyme Financiero | Honduras C.A.
+                </p>
             </div>
-            <div class="content-foo">
-                <h4>Ubicacion</h4>
-                <p>Danli, El Paraíso</p>
-            </div>
-        </div>
-        <h2 class="Titulo-final">Marcos Salgado</h2>
-    </footer>
+        </footer>
+        
+    </section>
 </body>
 
 </html>

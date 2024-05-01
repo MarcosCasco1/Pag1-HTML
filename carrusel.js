@@ -161,8 +161,8 @@ const $$ = str => document.querySelectorAll(str);
             $("#carousel").addEventListener("touchend", app.carousel.doup);
 
             app.carousel.reorder();
-            $('#prev').addEventListener("click", app.carousel.previous);
-            $('#next').addEventListener("click", app.carousel.next);
+            $('#prev-img').addEventListener("click", app.carousel.previous);
+            $('#next-img').addEventListener("click", app.carousel.next);
             app.selected = $(".selected");
 
         },
@@ -171,3 +171,20 @@ const $$ = str => document.querySelectorAll(str);
     }
     app.carousel.init();
 })();
+
+//AGREGADO LO QUE HARA APARECER LAS IMAGENES: 
+document.addEventListener('DOMContentLoaded', function() {
+    var imagenes = document.querySelectorAll('.image');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+        }
+      });
+    });
+  
+    imagenes.forEach(function(image) {
+      observer.observe(image);
+    });
+  });
+  

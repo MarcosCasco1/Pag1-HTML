@@ -5,8 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: "Lora", serif;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 .contenedor{
     padding: 60px 0;
@@ -37,7 +36,7 @@ a{
     
 }
 /*El HEADER*/
-header{
+.header{
     /*PARA EL GRADIENTE: se utilizo el uiGradients*/
       /*Esto de ../ nos ayuda a retroceder sobre un directorio*/
        width: 100%;
@@ -61,8 +60,9 @@ header{
 
    header .textos-header{
         display: flex;
-        font-size: 40px;
-        font-family: "Lora", serif;
+        font-size: 35px;
+        
+        text-transform: uppercase;
          height: 400px;/*CAMBIA LA ALTURA DEL TEXTO*/
          width: 100%;
          align-items: center;
@@ -73,6 +73,7 @@ header{
 
         .textos-header h1{
             font: 50px;
+            font-weight: 900;
             color: aliceblue;
             text-shadow: 2px 2px 4px #000000;
         
@@ -83,7 +84,7 @@ header{
         }
         .textos-header h2{
             font: 30px;
-            font-weight: 300;
+            font-weight: 400;
             color: #fff;
             text-shadow: 2px 2px 4px #000000;
         }
@@ -93,162 +94,208 @@ header{
         }
 
     /*AQUI SE DESGLOSA LA PARTE DEL MENU PRINCIPAL DE LA PAGINA*/
-        .menu{
-            background: linear-gradient(45deg, hsl(238, 50%, 25%), #1bffff52); /* Degradado de color para el fondo */
-            display: flex;
-            /*flex-flow: row nowrap;*/
-            height: 80px;
-            align-items: center;
-            justify-content: center;
-            height: 80px;
-            padding: 0 20px; /* Añadir espaciado horizontal */
-            
+    .header .header2{
+        position: relative;
+        height: 55px;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to bottom, #00bbffb2, rgb(1, 27, 34));
+        padding: -20px 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       
+     }
+       /*CAMBIAR EL LOGO*/
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 160px; /* Ajusta el ancho según el tamaño de tu logo */
+    height: auto; /* Esto asegura que la imagen se ajuste proporcionalmente */
+  }
+  .logo img:hover{
+    transform: scale(1.1);
+  }
+  .navigation ul{
+     list-style: none;
+     padding: 0 10px;
+     text-shadow: 2px 2px 4px #000000;
+  }
+  .header2 .navigation ul li{
+     float: left;
+     position: relative;
+     transition: .3s linear;
+     z-index: 1000;
+  }
+  .navigation ul li:hover{
+    transform: scale(1.1);
+  }
+  
+  .navigation ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px; /* Posición inicial por debajo del texto */
+    width: 100%;
+    height: 3px; /* Grosor de la línea */
+    background-color: transparent; /* Color de la línea */
+    transition: .20s ease; /* Transición suave */
+  }
+  .navigation ul li:hover::after {
+    bottom: 0; /* Posición final, debajo del texto */
+    background-color: #f7d309; /* Color de la línea */
+  }
+  .header2 .navigation ul li a{
+     font-size: 15px;
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+     padding: 16px;
+     display: block;
+     transition: all .2s ease;
+  
+  }
+  .header2 .navigation ul li a:hover{
+     background-color: rgb(2, 29, 65);
+     border-radius: 8px;
+  }
+  .header2 .navigation ul li ul{
+     position: absolute;
+     right: 0;
+     width: 180px;
+     background: linear-gradient(to bottom, #00bbffb2, rgb(1, 27, 34));
+     display: none;
+     border-radius: 8px; /*Se le agrega el borde redondeado*/
+  }
+  .header2 .navigation ul li ul li a{
+     font-size: 14px;
+     text-transform: capitalize;
+     
+  }
+  .header2 .navigation ul li ul li ul{
+     position: absolute;
+     top: 0;
+     right: 300px;
+   
+  }
+  .header2 .navigation ul li ul li{
+     width: 100%;
+  }
+  .header2 .navigation ul li:hover > ul{
+     display: initial;
+  }
+  #toggle,
+  .header label{
+     display: none;
+     cursor: pointer;
+  }
+  
+  .menu{
+     width: 45px;
+     height: 35px;
+  }
+  
+  /*CREACION DEL FORMULARIO PARA CONTACTOS*/
+/* styles.css */
+.contacto-seccion {
+    margin: 10px 150px; /* Márgenes alrededor de la sección */
+    border: 1px solid #ccc; /* Línea de borde */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center; /* Centrar el texto */
+    
+  }
+  
+  .titulo-principal {
+    color: #13293d; /* Color azul oscuro */
+    margin-top: 5px; /* Eliminar margen superior predeterminado */
+    margin-bottom: 15px;
+    font-size: 35px;
+    text-transform: uppercase;
 
-        }
-            .logo{  
-                display: flex;
-                flex:5 1 auto; 
-                      
-            }
-                .logo a{
-                    color: rgb(39, 41, 43);
-                    font-size: 30px; 
-                    margin-left: 110px;                           
-                }
-                .logo a:hover{
-                    color: #8e780e;
-                }
-                .logo img{
-                    display: block;
-                    width: 150px;
-                    height: auto;
-                    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
-                    margin-left: -25px;
-                }
-                .logo img:hover{
-                    transform: scale(1.2); /* Escala la imagen al 110% del tamaño original */
-                    cursor: pointer; /* Cambia el cursor a una mano */
-                }
-            .nav{
-                position: relative;/*Cambia el color de fondo del entorno de la pantalla*/
-                width: auto;
-                height: 40px;
-                background: #222222b2;
-                border-radius: 8px;
-                display: flex;
-                justify-content: flex-start; /* Alinea la barra de navegación a la izquierda */
-                margin-left: auto;
-                align-items: center; /* Alinea verticalmente los elementos */
-                padding-left: 20px; /* Añade espacio a la izquierda */        
-            }
-                .nav a{
-                    position: relative;
-                    display: inline-block;
-                    font-size: 1em;
-                    color: #ffffff;
-                    text-decoration: none;
-                    font-size: 0.8em;
-                    padding: 0 25px; /*Se ajusta el tamaño de la barra de navegacion*/
-                    z-index: 1;
-                    transform: scale(1.1);
-                }
-                .nav span{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 95px;
-                    height: 100%;
-                    background: linear-gradient(45deg, #2e3192, #1bffff);
-                    border-radius: 8px;
-                    transition: .5s ease;
-                }
-                /*ESTO HACE QUE SE MUEVA LA TRANCISION POR LOS BOTONES*/
-                    nav a:nth-child(1):hover~span{
-                        left: 0;
-                    }
-                    nav a:nth-child(2):hover~span{
-                        left: 110px;
-                    }
-                    nav a:nth-child(3):hover~span{
-                        left: 220px;
-                        width: 100px;
-                    }
-                    nav a:nth-child(4):hover~span{
-                        left: 325px;
-                        width: 150px;
-                    }
-                    nav a:nth-child(5):hover~span{
-                        left: 470px;
-                        width: 120px;
-                    }
-                    nav a:nth-child(6):hover~span{
-                        left: 590px;
-                        width: 110px;
-                    }
-                    nav a:nth-child(7):hover~span{
-                        left: 710px;
-                        width: 115px;
-                    }
-                    nav a:nth-child(8):hover~span{
-                        left: 825px;
-                        width: 165px;
-                    }
-             /*AQUI ES LA PARTE DE LOS ICONOS   */
-            .social{
-                display: flex;
-                align-items: center;
-                justify-content: flex-end; /* Alinear los iconos de redes sociales hacia la derecha */
-            }
-            .social a {
-                position: relative; /* Establece la posición relativa */
-                margin: 0 8px; /* Espacio entre los iconos de las redes sociales */
-                font-size: 24px;
-                color: #ffffff;
-                transition: color 0.3s, transform 0.3s; /* Transiciones suaves para el color y la escala */
-            }
-        
-            /* Efecto de escala al pasar el mouse */
-            .social a:hover {
-                transform: scale(1.2); /* Escala el icono al 130% del tamaño original */
-            }
-        
-            /* Cambio de color al pasar el mouse */
-            .social .facebook:hover {
-                color: #0a60bd; /* Cambia el color al pasar el mouse */
-            }
-        
-            .social .instagram:hover {
-                color: #e73e0b; /* Cambia el color al pasar el mouse */
-            }
-        
-            .social .whatsapp:hover {
-                color: #55e203; /* Cambia el color al pasar el mouse */
-            }
-        
-            /* Animación para el fondo cuadradito */
-            .social a::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 0;
-                height: 0;
-                background-color: transparent;
-                border: 1px solid transparent;
-                border-radius: 10px; /* Ajusta el radio de las esquinas para hacerlas curveadas */
-                transition: width 0.3s, height 0.3s, background-color 0.3s;
-                transform: translate(-50%, -50%);
-            }
-        
-            /* Efecto de crecimiento y cambio de color al pasar el mouse */
-            .social a:hover::after {
-                width: 30px;
-                height: 30px;
-                background-color: rgba(255, 255, 255, 0.038); /* Cambia el color de fondo */
-                border-color: hsla(0, 0%, 0%, 0.192); /* Cambia el color del borde */
-            }
-
-
+  }
+  
+  .contacto-contenedor {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 10px; /* Espaciado entre elementos hijos */
+  }
+  
+  .contacto-info {
+    flex: 1;
+    text-align: left; /* Alinear texto a la izquierda */
+  }
+  
+  .contacto-info img {
+    width: 80%; /* Imagen ocupa todo el ancho */
+    max-width: 300px; /* Máximo ancho de la imagen */
+    height: auto;
+    margin-bottom: 10px; /* Reducir margen inferior */
+  }
+  
+  .formulario {
+    flex: 1;
+    text-align: left; /* Alinear texto a la izquierda */
+  }
+  
+  .form-group {
+    margin-bottom: 10px; /* Reducir margen inferior */
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: calc(100% - 22px); /* Reducir el ancho para compensar el padding */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input[type="text"]:hover,
+  input[type="email"]:hover,
+  input[type="tel"]:hover,
+  textarea:hover {
+    border-color: #4CAF50;
+  }
+  
+  button[type="submit"],
+  .whatsapp-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover,
+  .whatsapp-btn:hover {
+    background-color: #45a049;
+  }
+  button[type="submit"] {
+    background-color: rgb(0, 45, 112); /* Color azul para el botón de enviar correo */
+  }
+  
+  .whatsapp-btn {
+    background-color: green; /* Color verde para el botón de enviar WhatsApp */
+  }
 /*ESTO SIRVE PARA TENER EL EFECTO WAVE: OSEA PONER LA OLA*/
 .wave{
     position: absolute;
@@ -339,3 +386,138 @@ width: 300px;
 .imagen-port:hover .hover-galeria{
     transform: scale(0);
 }
+/*CREACION DEL NUEVO FOOTER*/
+
+
+footer{
+    width: 100%;
+    padding: 10px 0px;
+    /*background-image: url(../Images/background-footer.svg);*/
+    background-size: cover;
+    background: linear-gradient(to right, #002454, #0077FF);
+  /*  -webkit-mask-image: url("../background-footer.svg");
+    mask-image: url("../background-footer.svg");*/
+    -webkit-mask-size: cover;
+    mask-size: cover;
+  }
+  
+  .container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 10px;
+  }
+  
+  .box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+  
+  .box__footer .logo img{
+    width: 180px;
+    margin-left: -20px;
+    
+  }
+  
+  .box__footer .terms .terms1{
+    max-width: 350px;
+    margin-top: 10px;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+  }
+  
+  .box__footer h2{
+    margin-bottom: 5px;
+    padding: 40px 0px 0px 0px;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #0a0a0a;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+  }
+  .box__footer h2::after {
+    content: '';
+    height: 3px;
+    width: 0px;
+    background-color: rgb(247, 255, 1);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: 0.3s ease;
+  }
+  .box__footer h2:hover::after {
+    width: 100px;
+  }
+  .box__footer h2:hover{
+    color: rgba(106, 242, 252, 0.808);
+  }
+  
+  .box__footer a{
+    display: block;
+    margin-top: 10px;
+    color: #ffffff;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s ease;
+  }
+  .box__footer a::before {
+    content: '';
+    height: 16px;
+    width: 3px;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    background-color: rgb(150, 4, 4);
+    transition: 0.5s ease;
+    opacity: 0;
+  }
+  
+  .box__footer a:hover::before {
+    opacity: 1;
+  }
+  .box__footer a:hover {
+    transform: translateX(-8px);
+    color: rgb(2, 225, 255);
+  }
+  
+  .locacion{
+    margin-top: 10px;
+    color: #ffffff;
+  }
+  .box__footer a:hover{
+    opacity: 0.8;
+  }
+  
+  .box__footer a .fab{
+    font-size: 25px;
+    padding: 0px 5px;
+    
+  
+  }
+  
+  .box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+  }
+  
+  .box__copyright p{
+    margin-top: 20px;
+    color: #ffffff;
+  }
+  
+  .box__copyright hr{
+    border: none;
+    height: 1px;
+    
+    background-color: #ffffff;
+  }
+  
+  
