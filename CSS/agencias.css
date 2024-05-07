@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap);
+
 
 *{/*EASTO SIRVE PARA RESETEAR CSS*/
     margin: 0;
@@ -8,160 +8,202 @@
     list-style: none;/*QUITA: las visñetas que aparecen en las listas*/
 }
 body{
-    background-color: rgb(255, 255, 255);
-    font-family: 'Poppins', sans-serif;
-  
+    font-family: "Roboto", sans-serif;
 }
+/*.header{
+    background: url(../img/e3.jpg);
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+   
 
-.container {
-  
-    margin: 0 auto;
-    }
-
-    .margen-interno{
-        padding: 0 50px;   
-    }
-    
-    .contenedor img{
-        display: block;
-        width: 150px;
-        height: auto;
-        transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
-        margin-left: -25px;
-    }
-    .contenedor img:hover{
-        transform: scale(1.2); /* Escala la imagen al 110% del tamaño original */
-        cursor: pointer; /* Cambia el cursor a una mano */
-    }
-    
-    .menu {
-        background: linear-gradient(45deg, hsl(238, 50%, 25%), #1bffff52); /* Degradado de color para el fondo */
-                display: flex;
-               /* flex-flow: row nowrap;*/
-                height: 80px;
-                align-items: center;
-                justify-content: center;
-                height: 80px;
-                padding: 0 20px; /* Añadir espaciado horizontal */
-    }
-    .nav{
-        position: relative;/*Cambia el color de fondo del entorno de la pantalla*/
-        width: auto;
-        height: 40px;
-        background: #222222b2;
-        border-radius: 8px;
+    display: flex;
+    flex-flow: column nowrap;
+    }*/
+    .header2{
+        position: relative;
+        height: 55px;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to bottom, #00bbffb2, rgb(1, 27, 34));
+        padding: -20px 5%;
         display: flex;
-        justify-content: flex-start; /* Alinea la barra de navegación a la izquierda */
-        margin-left: auto;
-        align-items: center; /* Alinea verticalmente los elementos */
-        padding-left: 20px; /* Añade espacio a la izquierda */        
-    }
-        .nav a{
-            position: relative;
-            display: inline-block;
-            font-size: 1em;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.8em;
-            padding: 0 25px; /*Se ajusta el tamaño de la barra de navegacion*/
-            z-index: 1;
-            transform: scale(1.1);
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+     }
+       /*CAMBIAR EL LOGO*/
+ .logo {
+    display: flex;
+    align-items: center;
+ }
+ 
+ .logo img {
+    width: 160px; /* Ajusta el ancho según el tamaño de tu logo */
+    height: auto; /* Esto asegura que la imagen se ajuste proporcionalmente */
+ }
+ .logo img:hover{
+    transform: scale(1.1);
+ }
+  .navigation ul{
+     list-style: none;
+     padding: 0 10px;
+     text-shadow: 2px 2px 4px #000000;
+  }
+  .header2 .navigation ul li{
+     float: left;
+     position: relative;
+     transition: .3s linear;
+     z-index: 1000;
+  }
+  .navigation ul li:hover{
+    transform: scale(1.1);
+ }
+ .navigation ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px; /* Posición inicial por debajo del texto */
+    width: 100%;
+    height: 3px; /* Grosor de la línea */
+    background-color: transparent; /* Color de la línea */
+    transition: .20s ease; /* Transición suave */
+ }
+ .navigation ul li:hover::after {
+    bottom: 0; /* Posición final, debajo del texto */
+    background-color: #f7d309; /* Color de la línea */
+ }
+  .header2 .navigation ul li a{
+     font-size: 15px;
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+     padding: 16px;
+     display: block;
+     transition: all .2s ease;
+ 
+  }
+  .header2 .navigation ul li a:hover{
+     background-color: rgb(2, 29, 65);
+     border-radius: 8px;
+  }
+  .header2 .navigation ul li ul{
+     position: absolute;
+     right: 0;
+     width: 180px;
+     background: linear-gradient(to bottom, #00bbffb2, rgb(1, 27, 34));;
+     display: none;
+     border-radius: 8px; /*Se le agrega el borde redondeado*/
+  }
+  .header2 .navigation ul li ul li a{
+     font-size: 14px;
+     text-transform: capitalize;
+     
+  }
+  .header2 .navigation ul li ul li ul{
+     position: absolute;
+     top: 0;
+     right: 300px;
+   
+  }
+  .header2 .navigation ul li ul li{
+     width: 100%;
+  }
+  .header2 .navigation ul li:hover > ul{
+     display: initial;
+  }
+  #toggle,
+  .header label{
+     display: none;
+     cursor: pointer;
+  }
+ 
+  .menu{
+     width: 45px;
+     height: 35px;
+  }
+ 
+  .fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, #00bbffb2, rgb(1, 27, 34));
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agregamos una sombra */
+}
+ 
+            
+
+        .texto-principal{
+            background: rgba(0,0,0,.6);
+            height: 600px;
+            padding: 120px;
+            text-align: center;
         }
-        .nav span{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 95px;
-            height: 100%;
-            background: linear-gradient(45deg, #2e3192, #1bffff);
-            border-radius: 8px;
-            transition: .5s ease;
-        }
-         /*ESTO HACE QUE SE MUEVA LA TRANCISION POR LOS BOTONES*/
-         nav a:nth-child(1):hover~span{
-            left: 0;
-        }
-        nav a:nth-child(2):hover~span{
-            left: 110px;
-        }
-        nav a:nth-child(3):hover~span{
-            left: 220px;
-            width: 100px;
-        }
-        nav a:nth-child(4):hover~span{
-            left: 325px;
-            width: 150px;
-        }
-        nav a:nth-child(5):hover~span{
-            left: 470px;
-            width: 120px;
-        }
-        nav a:nth-child(6):hover~span{
-            left: 600px;
-            width: 100px;
-        }
-        nav a:nth-child(7):hover~span{
-            left: 710px;
-            width: 100px;
-        }
-        nav a:nth-child(8):hover~span{
-            left: 830px;
-            width: 165px;
-        }
-                /*AQUI ES LA PARTE DE LOS ICONOS   */
-                .social{
-                display: flex;
-                align-items: center;
-                justify-content: flex-end; /* Alinear los iconos de redes sociales hacia la derecha */
+        
+            h1{  
+                font-style: italic;
+                font-size: 90px;
+                color: #fff;
+                text-shadow: 2px 2px 4px #000000;
+                font-weight: 900;
+                text-align: center;
+                line-height: 1.6;
+                margin-top:20px;
+            }
+            h1:hover{
+                color: #00b7ff;
+                text-shadow: 2px 2px 4px #0a0a0a;
+            }
+            h1{
+                animation: mover-izquierda-derecha 2s infinito;
+            }
+            @keyframes mover-izquierda-derecha{
+                from{
+                    transform: translateX(-100px);
                 }
-                .social a {
-                position: relative; /* Establece la posición relativa */
-                margin: 0 8px; /* Espacio entre los iconos de las redes sociales */
-                font-size: 24px;
-                color: #201f1f;
-                transition: color 0.3s, transform 0.3s; /* Transiciones suaves para el color y la escala */
+            }
+       
+            .mipyme{
+                font-style: italic;
+                font-size: 90px;
+                color: #fff;
+                text-shadow: 2px 2px 4px #000000;
+                font-weight: 900;
+                text-align: center;
+                line-height: 1.6;
+                margin-top: -40px;
+                
+            }
+            
+            .mipyme:hover{
+                color: #00b7ff;
+                text-shadow: 2px 2px 4px #0a0a0a;
+            }
+            .creciendo{
+                font-family: "Lora", serif;
+                font-size: 50px;
+                font-style: italic;
+                color: #fdf900;
+                text-shadow: 2px 2px 4px #000000;
+                font-weight: 800;
+                text-align: center;
+                line-height: 1.6;
+               margin-top: -20px;
+               animation: mover-izquierda-derecha 5s linear infinite; /* Animación infinita */
+            }
+            @keyframes mover-izquierda-derecha {
+                0% {
+                    transform: translateX(-100px); /* Desde -100px (izquierda) */
                 }
-    
-                /* Efecto de escala al pasar el mouse */
-                .social a:hover {
-                transform: scale(1.2); /* Escala el icono al 130% del tamaño original */
+                100% {
+                    transform: translateX(100px); /* Hasta 100px (derecha) */
                 }
-    
-                /* Cambio de color al pasar el mouse */
-                .social .facebook:hover {
-                color: #0a60bd; /* Cambia el color al pasar el mouse */
-                }
-    
-                .social .instagram:hover {
-                color: #e73e0b; /* Cambia el color al pasar el mouse */
-                }
-    
-                .social .whatsapp:hover {
-                color: #55e203; /* Cambia el color al pasar el mouse */
-                }
-    
-                /* Animación para el fondo cuadradito */
-                .social a::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 0;
-                height: 0;
-                background-color: transparent;
-                border: 1px solid transparent;
-                border-radius: 10px; /* Ajusta el radio de las esquinas para hacerlas curveadas */
-                transition: width 0.3s, height 0.3s, background-color 0.3s;
-                transform: translate(-50%, -50%);
-                }
-    
-                /* Efecto de crecimiento y cambio de color al pasar el mouse */
-                .social a:hover::after {
-                width: 30px;
-                height: 30px;
-                background-color: rgba(255, 255, 255, 0.038); /* Cambia el color de fondo */
-                border-color: hsla(0, 0%, 0%, 0.192); /* Cambia el color del borde */
-                }
+            }
+            .creciendo:hover{
+                color: #fff700;
+                text-shadow: 2px 2px 4px #0a0a0a;
+            }
 
  .header-content{
         margin-top: 5px;/*PARA SEPARAR DE LA PARTE DE ARRIBA*/
@@ -173,25 +215,27 @@ body{
 .slaider{
     display: flex;
     align-items: center;
-    background: hsla(0, 3%, 6%, 0.11);
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(0, 140, 255, 0.253)); /* Gradiente de blanco a azul */
+   
 }
 .slider-text{
     margin-left: 42px;
     width: 50%;
 }
 .slider-text h1{
-    font-size: 45px;
-    color: rgba(14, 43, 156, 0.834);
+    font-size: 40px;
+    text-align: start;
+    margin-bottom: 10px;
+    color: #071252;
     text-transform: uppercase;
     font-weight: 800;/*grosor de alguna letra*/
-    text-shadow: 2px 2px 4px #00000087;
+    text-shadow: 2px 2px 2px #ffffffcb;
+   
     
 }
 .slider-text h1:hover{
-    margin-left: 42px;
-    color: #0e1179;
-    cursor: pointer; 
-    transform: scale(1.1);
+ 
+    color: #003668;
     cursor: pointer;
 }
 .slider-text p{
@@ -224,11 +268,11 @@ body{
     border-radius: 50px;
 }
 .btn-1:hover{
-    background: linear-gradient(45deg, hsl(238, 52%, 38%), hsla(180, 100%, 55%, 0.253));
+    background: linear-gradient(to bottom, #00bbffb2, rgb(1, 27, 34));
     color: rgb(255, 255, 255);
 }
 .btn-2:hover{
-    background: linear-gradient(45deg, hsl(238, 52%, 38%), hsla(180, 100%, 55%, 0.253));
+    background: linear-gradient(to bottom, #00bbffb2, rgb(1, 27, 34));
     color: rgb(255, 255, 255);
 }
 /*PARTE DE LA IMAGEN DEL SLIDER*/
@@ -241,119 +285,93 @@ body{
     width: 650px;
 }
 
-/*AQUI COMIENZAN LOS TABS*/
-.products{
-    background: linear-gradient(45deg, hsl(237, 37%, 12%), hsla(180, 100%, 55%, 0.253));
-}
-.tabs {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 100px 20px;
-}
-.tabs label {
-    width: 15%;
-    order: 1;
-    display: block;
-    padding: 20px 0;
-    cursor: pointer;
-    color: rgb(0, 115, 255);
-    text-shadow: 2px 2px 4px #00000087;
-    font-weight: 700;
-    transition: background ease 0.2s;
-}
-.tabs .tab{
-    order: 99;
-    flex-grow: 1;
-    width: 100%;
-    display: none;/*ESTA PROPIEDAD HACE QUE SE DESAPARESCA LA PARTE DEL TAB*/
-    padding-top: 25px;
-}
-.tabs input[type="radio"]{
-    display: none;
-}
-.tabs input[type="radio"]:checked + label{
-    border-bottom: 2px solid rgb(0, 183, 255);
-    color: #eceeef;
-}
-.tabs input[type="radio"]:checked + label + .tab{
-    display: block;
-}
-
-/*Trabajar en los PRODUCTOS*/
-.product {
-    display: flex;
-    align-items: center;
-    padding: 25px;
-    margin: 0 10px;
-}
-.product-img{
-width: 50%;
-text-align: left;
-}
-.product-img h4{
-    display: inline-block;
-    padding: 0px 0px;
-    line-height: 15px;
-    color: rgb(255, 255, 255);
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 800;
-    border: 5px solid rgba(255, 255, 255, 0.482);
-    border-radius: 10px;
-    margin-bottom: 50px;
-}
-.product-img img{
-    width: 170px;
-    height: 120px;
-}
-.product-txt{
-    width: 50%;
-    margin-left: 10px;
-    text-align: left;
-}
-.product-txt h4{
-    color: #eceeef;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 800;
-    margin-bottom: 5px;
-}
-.product-txt p{
-    color: rgb(0, 33, 85);
-    font-size: 16px;
-    margin-bottom: 15px;
-}  
-.product-txt span{
-    color: #eceeef;
-    font-size: 18px;
-    font-weight: 800;
-}  
+/*CONTENEDOR DE LA INFORMACION ABAJO DEL SLIDER*/ 
 .info{
-    padding: 5px 0px;
+    padding: 20px 0px;
     display: flex;
     align-items: center;
 }      
-.info-img{
-    width: 55%;
-}         
-.info-img img{
-    width: 700px;
+.info-img {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+}
+
+.info-img img {
+    width: 100%;
     height: auto;
-} 
+    transition: transform 0.3s ease;
+}
+
+.info-img:hover img {
+    transform: scale(1.1);
+}
+
+.info-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.info-img:hover::after {
+    opacity: 1;
+}
+
+.info-img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.info-img:hover .info-img-text {
+    opacity: 1;
+}
+
 .info-txt{
-    width: 45%;
+    width: 50%;
 }
 .info-txt h2{
     font-size: 45px;
-    color: #0e1179;
+    color: #071252;
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 20px;
+}
+.textos-header2 h2{
+    padding: 5px 5px; /* Reducir el espacio entre el texto y el borde */
+    border-radius: 10px;
+    margin: 0 auto; /* Centrar el h2 y agregar margen en la parte superior e inferior */
+    margin-bottom: 30px;
+    font-size:40px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    font: 20px;
+    font-weight: 800;
+    color: #071252;
+    text-shadow: 2px 2px 4px #e4e0e0;
+    border: 2px solid #ccc; /* Agregar un borde alrededor del h2 */
+    max-width: fit-content; /* Ajustar el ancho del h2 al contenido */
 }
 .info-txt p{
     font-size: 15px;
     color: #201f1f;
     margin-bottom: 40px;
+    margin-left: 15px;
 }
 
 .btn-2{
@@ -364,24 +382,24 @@ text-align: left;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-right: 20px;
+    margin-right: 5px;
+    margin-left: 15px;
     border-radius: 50px;
 }
 /*SECCION DE HORARIOS*/
 .horario{
-    padding: 100px 0px;
-    background-color: hsla(193, 100%, 50%, 0.151);
-
+    padding: 80px 0px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(0, 140, 255, 0.233)); /* Gradiente de blanco a azul */
+     /* Si deseas ajustar la dirección del degradado, puedes cambiar 'to bottom' por otra dirección como 'to right', 'to left', 'to top', etc. */
 }
 .horario-info h2{
     font-size: 45px;
-    margin: 10px;
+    margin: 0 auto;
     color: #0e1179;
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 40px;
-    
-    
+
 }
 .horario-txt{
     margin: 10px;
@@ -477,35 +495,183 @@ text-align: left;
 }
 
 /*MODIFICACION DEL FOOTER*/
-.footer{
-    padding: 100px 40px;
+/*AQUI SE COMIENZA A HACER EL FOOTER*/
+/*CREACION DEL NUEVO FOOTER*/
+
+
+footer{
+    width: 100%;
+    padding: 10px 0px;
+    /*background-image: url(../Images/background-footer.svg);*/
+    background-size: cover;
+    background: linear-gradient(to right, #002454, #0077FF);
+  /*  -webkit-mask-image: url("../background-footer.svg");
+    mask-image: url("../background-footer.svg");*/
+    -webkit-mask-size: cover;
+    mask-size: cover;
+  }
+  
+  .container__footer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    background:linear-gradient(45deg, hsl(239, 65%, 12%), #015757);
-}
-.links h4{
-    color: rgb(210, 210, 220);
-    text-transform: uppercase;
-    margin-bottom: 20px; 
-}
-.links ul li a{
-    color: #ffffff;
-    font-size: 16px;
-    margin-bottom: 5px;
-    display: inline-block;
-}
-.footer img{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 10px;
+  }
+  
+  .box__footer{
     display: flex;
-    width: 300px;
-    height: 200px;
-    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
-    margin-left: -10px;
+    flex-direction: column;
+    padding: 0px;
+  }
+  
+  .box__footer .logo img{
+    width: 180px;
+    margin-left: -20px;
+    
+  }
+  
+  .box__footer .terms .terms1{
+    max-width: 350px;
+    margin-top: 10px;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+  }
+  
+  .box__footer h2{
+    margin-bottom: 5px;
+    padding: 40px 0px 0px 0px;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #0a0a0a;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+  }
+  .box__footer h2::after {
+    content: '';
+    height: 3px;
+    width: 0px;
+    background-color: rgb(247, 255, 1);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: 0.3s ease;
+  }
+  .box__footer h2:hover::after {
+    width: 100px;
+  }
+  .box__footer h2:hover{
+    color: rgba(106, 242, 252, 0.808);
+  }
+  
+  .box__footer a{
+    display: block;
+    margin-top: 10px;
+    color: #ffffff;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s ease;
+  }
+  .box__footer a::before {
+    content: '';
+    height: 16px;
+    width: 3px;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    background-color: rgb(150, 4, 4);
+    transition: 0.5s ease;
+    opacity: 0;
+  }
+  
+  .box__footer a:hover::before {
+    opacity: 1;
+  }
+  .box__footer a:hover {
+    transform: translateX(-8px);
+    color: rgb(2, 225, 255);
+  }
+
+  .facebook{
+    margin: 0px 10px;
+    color: #0a74ee;
+}
+.instagram{
+    margin: 0px 10px;
+    color: #E4405F;
+}
+.Linkedin{
+    margin: 0px 10px;
+    color: #d6e6f8;
+}
+.whatsapp{
+    margin: 0px 10px;
+    color: #01b534;
 }
 
-.footer img:hover{
-    transform: scale(1.2); /* Escala la imagen al 110% del tamaño original */
-    cursor: pointer; /* Cambia el cursor a una mano */
+/* Efecto de escala al pasar el mouse */
+.box__footer a:hover {
+transform: scale(1.2); /* Escala el icono al 130% del tamaño original */
 }
+
+/* Cambio de color al pasar el mouse */
+.box__footer .facebook:hover {
+color: #00264e; /* Cambia el color al pasar el mouse */
+}
+
+.box__footer  .instagram:hover {
+color: #9b2400; /* Cambia el color al pasar el mouse */
+}
+
+.box__footer  .whatsapp:hover {
+color: #55e203; /* Cambia el color al pasar el mouse */
+}
+.box__footer  .Linkedin:hover{
+    color: #03e2e2; /* Cambia el color al pasar el mouse */
+}
+ 
+ .locacion{
+    margin-top: 10px;
+    color: #ffffff;
+ }
+ .box__footer a:hover{
+    opacity: 0.8;
+ }
+ 
+ .box__footer a .fab{
+    font-size: 25px;
+    padding: 0px 5px;
+    
+
+ }
+ 
+ .box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+ }
+ 
+ .box__copyright p{
+    margin-top: 20px;
+    color: #ffffff;
+ }
+ 
+ .box__copyright hr{
+    border: none;
+    height: 1px;
+    
+    background-color: #ffffff;
+ }
+ 
+
+
+
+
 
 @media (max-width: 990px){
 

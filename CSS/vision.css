@@ -147,7 +147,7 @@ margin-top: -150px; /* Ajustar el margen superior */
 
 .visionvideo p{
 font-size: 30px;
-color: #02ddff;
+color: #ffffff;
 text-shadow: 2px 2px 2px #222121;
 /*text-shadow: 2px 2px 4px #ffffff;*/
 font-weight: 600;
@@ -156,11 +156,7 @@ width:100%;
 margin-top:100px; /* Agregar margen superior */
 text-align: center;
 }
-.visionvideo p:hover{
-    color: #02ddff;
-    text-shadow: 2px 2px 4px #222121;
-    transform: translateX(-10px); /* Efecto de elevación */
-}
+
 
 #vision {
 min-height: 100vh;
@@ -217,8 +213,8 @@ footer{
     
     background: linear-gradient(to right, #002454, #0077FF);
     background-color: #000000;
-    -webkit-mask-image: url("../background-footer.svg");
-    mask-image: url("../background-footer.svg");
+   /* -webkit-mask-image: url("../background-footer.svg");
+    mask-image: url("../background-footer.svg");*/
     -webkit-mask-size: cover;
     mask-size: cover;
     z-index: 1000;

@@ -212,74 +212,266 @@ a{
                 color: #fff700;
                 text-shadow: 2px 2px 4px #0a0a0a;
             }
+            
+         
 
-    .section{
+/*SECCION PARA COLOCAR UN VIDEO*/
+.texto-movido{
+    background: linear-gradient(to top, #00bbffb2, rgb(1, 27, 34));
+    padding: 10px;
+    text-align: justify;
+}  
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 55px;
+  }
+  
+  .content-section {
+    flex: 1;
+    padding-right: 20px; /* Padding a la derecha */
+    margin-right: 50px; 
+  }
+  .content-section h2{
+    margin: 10px -10px; /* Margen negativo para compensar la justificación */
+    font-size: 40px;
+    color: #071252;
+    text-shadow: 2px 2px 4px #e4e0e0;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-bottom: 2px solid #ccc; /* Línea delgada de color gris */
+    padding-bottom: 5px; /* Espacio adicional bajo el h2 */
+  }
+   .parra {
+    color: #002454;
+    font-size: 16px;
+    text-align: justify;
+    margin: 20px -10px; /* Margen negativo para compensar la justificación */
+  }
+  .parraf {
+    color: #002454;
+    top: 20px;
+    font-size: 16px;
+    text-align: justify;
+    margin: 10px -10px; /* Margen negativo para compensar la justificación */
+  }
+
+  .video-section {
+    flex: 1;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Color del borde */
+    border-radius: 20px 0 0 20px; /* Bordes redondeados */
+    overflow: hidden; /* Para que el borde redondeado no se vea cortado */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+  }
+  
+  .video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para ajustar el tamaño del video al contenedor */
+    border-radius: 20px 0 0 20px; /* Bordes redondeados */
+  }
+  
+  
+/*SECCION DE DIVISION DE COLOR AZUL*/
+.finanzas-section {
+    background: linear-gradient(to top, #00bbffb2, rgb(1, 27, 34));
+    padding: 30px;
+    text-align: justify;
+}
+
+.finanzas-section .content {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-left: 15px;
+}
+
+.finanzas-section h3 {
+    margin-top: 5px;
+    font-size: 25px;
+    margin-bottom: -5px; /* Espacio inferior para separar del párrafo */
+    
+}
+
+.finanzas-section p {
+color: #ffffff;
+    font-size: 17px;
+    margin-right: 10px;
+    line-height: 1.5;
+    margin: 10px 0px; /* Elimina el margen predeterminado del párrafo */
+}
+
+/*SECCION DE DEPARTAMENTOS*/
+.content-section2 {
+    margin: 10px;
+    padding-right: 20px; /* Padding a la derecha */
+    margin-right: 50px;
+}
+
+.content-section2 h2 {
+    font-size: 40px;
+    color: #071252;
+    text-shadow: 2px 2px 4px #e4e0e0;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-bottom: 2px solid #ccc; /* Línea delgada de color gris */
+    padding-bottom: 5px; /* Espacio adicional bajo el h2 */
+    margin: 10px auto; /* Centra el h2 horizontalmente */
+    max-width: fit-content; /* Ajusta el ancho máximo del h2 al contenido */
+    margin-bottom: 20px; /* Márgenes inferiores */
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+    margin:0px 30px auto;
+    max-width: 100%;
+}
+
+.servicio {
+    position: relative;
+    
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.servicio img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.servicio .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.servicio:hover .overlay {
+    opacity: 1;
+}
+
+.servicio:hover img {
+    transform: scale(1.1);
+}
+
+.servicio h3 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+/*CREACION DE LA SECCION DE LOS ARTICULOS*/
+
+.section {
     background: #f7f7f7;
     display: flex;
-    
-    }
-        .articulos{
-            background: #f7f7f7;
-            flex: 2 1 auto;
-            display: flex;
-            flex-flow: row wrap;
+}
 
-        }
-          
-            .article{             
-                flex: 1 1 40%;
-                color: #e6dcdc;
-                font-size: 12px;
-                letter-spacing: 1;
-                margin: 10px 10px 0 0px;
-                flex: 1 1 45%;
-                background: #ececec;
-                
-            }
-            .article img{
-                width: 100%;
-            }           
-            .article a{
-                color: #fff;
-                font-size: 13px;
-                padding: 10px ;
-                background: rgba(0,0,0,.5);
-                margin: 0px 0;
-                display: inline-block; /*Esto nos ayuda que la cajita se convierta en un boton*/
-            }
-            .article a:hover{
-                background-color: #000;
-                color: #2dceff;
-            }
-            h3{
-                text-shadow: 2px 2px 4px #0a0a0a;
-                font-weight: 500;
-                font-style: normal;
-                color: #fff;
-                font-size: 13px;
-                padding: 10px 0px;
-                margin-top: -80px;
-            }
-            .article h3:hover{
-                color: #f6f945;
-            }
-            h2{
-                text-shadow: 2px 2px 4px #0a0a0a;
-                font-weight: 900;
-                font-style: normal;
-                font-size: 25px;
-                text-transform: uppercase;/*LA OPCION UPPERCASE ES PARA PONER EL TITULO EN MAYUSCULA*/
-                padding: 0px 0 10px 0;             
-                color: #ffffff;
-            }
-            .article h2:hover{
-                color: #f6f945;
-            }
-            p{
-                color: rgb(32, 32, 32);
-                padding: 10px 0 10px 0;      
-                
-            }
+.articulos {
+    background: #f7f7f7;
+    flex: 2 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.article {
+    flex: 1 1 45%;
+    color: #e6dcdc;
+    font-size: 12px;
+    letter-spacing: 1;
+    margin: 10px 10px 0 0px;
+    background: #ececec;
+    position: relative;
+    overflow: hidden; /* Ocultar el contenido que está fuera del contenedor */
+    transition: filter 0.3s; /* Transición suave para el filtro de imagen */
+}
+
+.article img {
+    width: 100%;
+    transition: filter 0.3s; /* Transición suave para el filtro de imagen */
+}
+
+.article:hover img {
+    filter: brightness(0.7); /* Oscurecer la imagen al pasar el cursor */
+}
+
+.contenido {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajustar al ancho completo de la imagen */
+    height: 100%; /* Ajustar al alto completo de la imagen */
+    text-align: center; /* Centrar el contenido */
+    opacity: 0; /* Ocultar el contenido por defecto */
+    transition: opacity 0.3s; /* Transición suave para la opacidad */
+    background-color: rgba(0, 26, 50, 0.8); /* Fondo oscuro */
+    padding: 20px; /* Margen dentro de la imagen */
+    box-sizing: border-box; /* Incluir el padding en el tamaño total */
+    display: flex; /* Alinear contenido en el centro */
+    flex-direction: column; /* Alinear contenido en el centro */
+    justify-content: center; /* Alinear contenido en el centro */
+}
+
+
+.contenido .boton-leer {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    padding: 3px 6px; /* Reducimos el tamaño del botón */
+    margin-top: 30px; /* Margen superior */
+    background-color: yellow;
+    border-radius: 3px;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Agregamos transición para el fondo y la transformación */
+}
+
+.contenido .boton-leer:hover {
+    background-color: #00ccff;
+    transform: scale(1.1); /* Escala al pasar el cursor */
+}
+
+.article img {
+    width: 100%;
+    transition: filter 0.3s, transform 0.3s; /* Agregamos transición para la escala */
+}
+
+.article:hover img {
+    filter: brightness(0.7); /* Oscurecer la imagen al pasar el cursor */
+    transform: scale(1.1); /* Escala al pasar el cursor */
+}
+
+
+.article:hover .contenido {
+    opacity: 1; /* Mostrar el contenido al pasar el cursor */
+}
+
+h3, h2 {
+    color: #fff;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+p {
+    color: #fff;
+    text-align: justify;
+}
+
            
             .navegacion{
                 background: #d9dce0;
@@ -429,9 +621,9 @@ footer{
     height: 16px;
     width: 3px;
     position: absolute;
-    top: 0px;
+    top: 3px;
     left: -10px;
-    background-color: rgb(150, 4, 4);
+    background-color: rgb(0, 255, 234);
     transition: 0.5s ease;
     opacity: 0;
   }
@@ -441,8 +633,52 @@ footer{
   }
   .box__footer a:hover {
     transform: translateX(-8px);
-    color: rgb(2, 225, 255);
+    color: rgb(255, 217, 0);
   }
+
+    .redes-sociales{
+    position: relative; /* Establece la posición relativa */
+    margin: 0 0px; /* Espacio entre los iconos de las redes sociales */
+    transition: color 0.3s, transform 0.3s; /* Transiciones suaves para el color y la escala */
+    }
+    .facebook{
+        margin: 0px 10px;
+        color: #0a74ee;
+    }
+    .instagram{
+        margin: 0px 10px;
+        color: #E4405F;
+    }
+    .Linkedin{
+        margin: 0px 10px;
+        color: #d6e6f8;
+    }
+    .whatsapp{
+        margin: 0px 10px;
+        color: #01b534;
+    }
+
+    /* Efecto de escala al pasar el mouse */
+    .redes-sociales a:hover {
+    transform: scale(1.2); /* Escala el icono al 130% del tamaño original */
+    }
+
+    /* Cambio de color al pasar el mouse */
+    .redes-sociales .facebook:hover {
+    color: #00264e; /* Cambia el color al pasar el mouse */
+    }
+
+    .redes-sociales .instagram:hover {
+    color: #9b2400; /* Cambia el color al pasar el mouse */
+    }
+
+    .redes-sociales .whatsapp:hover {
+    color: #55e203; /* Cambia el color al pasar el mouse */
+    }
+    .redes-sociales .Linkedin:hover{
+        color: #03e2e2; /* Cambia el color al pasar el mouse */
+    }
+
  
  .locacion{
     margin-top: 10px;

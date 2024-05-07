@@ -36,8 +36,8 @@ a{
        width: 100%;
        height: 600px; /*Pocisionamos la imgen el el tamaño*/
        background: #2980B9;  /* fallback for old browsers */
-       background: -webkit-linear-gradient(to right, hsla(0, 0%, 100%, 0.641), hsla(196, 93%, 70%, 0.619), hsla(204, 64%, 44%, 0.696)), url(../img/s4.jpg);  /* Chrome 10-25, Safari 5.1-6 */
-       background: linear-gradient(to right, hsla(0, 0%, 100%, 0.641), hsla(196, 93%, 70%, 0.619), hsla(204, 64%, 44%, 0.696)), url(../img/s4.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+       background: -webkit-linear-gradient(to right, hsla(0, 0%, 100%, 0.641), hsla(196, 93%, 70%, 0.619), hsla(204, 64%, 44%, 0.696)), url(../img/NOVEDADES/nov1.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+       background: linear-gradient(to right, hsla(0, 0%, 100%, 0.641), hsla(196, 93%, 70%, 0.619), hsla(204, 64%, 44%, 0.696)), url(../img/NOVEDADES/nov1.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    
        background-attachment: fixed;
        background-size: cover;
@@ -234,7 +234,114 @@ a{
         transform: translateX(10px); /* Hasta 100px (derecha) */
     }
 }
-/*SECCION DE SERVICIOS*/
+
+.contenedor {
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+    overflow: hidden;
+    width: fit-content; /* Ajusta el ancho del contenedor al contenido */
+}
+
+.noticias {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.imagen img {
+    width: 500px; /* Ajusta el tamaño deseado */
+    height: auto;
+    max-width: 100%; /* Asegura que no exceda el 50% del contenedor */
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Añade transición para la escala */
+}
+
+.imagen:hover {
+    transform: scale(1.1); /* Agranda la imagen al pasar el cursor */
+    filter: none; /* Quita el filtro */
+}
+
+.contenedor2 {
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 10px;
+    background-image: url('../img/NOVEDADES/img-mamá.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.imagen2 img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.titulo2 {
+    position: absolute;
+    bottom: 70px;
+    left: 672px;
+    color: white;
+    text-shadow: 2px 2px 2px #050505;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgba(1, 217, 255, 0.7);
+    padding: 5px 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.imagen2:hover img {
+    transform: scale(1.1);
+}
+
+.imagen2:hover .titulo2 {
+    opacity: 1;
+}
+
+.contenedor3 { 
+    padding: 20px;
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+    overflow: hidden;
+    width: fit-content; /* Ajusta el ancho del contenedor al contenido */
+}
+
+.noticias3 {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.imagen3 img {
+    border-radius: 10px;
+    width: 300px; /* Ajusta el tamaño deseado */
+    height: auto;
+    max-width: 100%; /* Asegura que no exceda el 50% del contenedor */
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Añade transición para la escala */
+}
+
+.imagen3:hover {
+    transform: scale(1.1); /* Agranda la imagen al pasar el cursor */
+    filter: none; /* Quita el filtro */
+}
+
+
+
+/*SECCION DE DEPARTAMENTOS*/
 .servicios {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

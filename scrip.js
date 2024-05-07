@@ -12,10 +12,10 @@ var swiper = new Swiper(".mySwiper-1", {
         prevEl:".swiper-button-prev",
 
     },
-   // autoplay: {
-     //   delay: 5000, // Tiempo en milisegundos entre cada slide
-     //  disableOnInteraction: false, // Deshabilitar el autoplay al interactuar con el swiper (por ejemplo, cuando se desliza manualmente)
-     //  },
+   autoplay: {
+      delay: 3000, // Tiempo en milisegundos entre cada slide
+     disableOnInteraction: false, // Deshabilitar el autoplay al interactuar con el swiper (por ejemplo, cuando se desliza manualmente)
+       },
 });
 //LA PARTE DE LOS PRODUCTOS 
 var swiper = new Swiper(".mySwiper-2", {

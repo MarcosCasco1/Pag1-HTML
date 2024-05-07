@@ -36,8 +36,8 @@ a{
        width: 100%;
        height: 600px; /*Pocisionamos la imgen el el tamaño*/
        background: #2980B9;  /* fallback for old browsers */
-       background: -webkit-linear-gradient(to right, hsla(0, 0%, 100%, 0.641), hsla(196, 93%, 70%, 0.619), hsla(204, 64%, 44%, 0.696)), url(../img/s4.jpg);  /* Chrome 10-25, Safari 5.1-6 */
-       background: linear-gradient(to right, hsla(0, 0%, 100%, 0.641), hsla(196, 93%, 70%, 0.619), hsla(204, 64%, 44%, 0.696)), url(../img/s4.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+       background: -webkit-linear-gradient(to right, hsla(0, 0%, 100%, 0.641), hsla(196, 93%, 70%, 0.619), hsla(204, 64%, 44%, 0.696)), url(../img/EQUIPOMIPYME/E1.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+       background: linear-gradient(to right, hsla(0, 0%, 100%, 0.641), hsla(196, 93%, 70%, 0.619), hsla(204, 64%, 44%, 0.696)), url(../img/EQUIPOMIPYME/E1.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    
        background-attachment: fixed;
        background-size: cover;
@@ -206,26 +206,27 @@ a{
      height: 35px;
   }
 
-  .textos-header2 h2{
+  .textos-header2 {
+    position: absolute; /* Posición absoluta para que puedas colocar el texto en cualquier lugar dentro del contenedor de la onda */
+    top: 86%; /* Ajusta la posición verticalmente al centro */
+    right: 90px; /* Alinea el texto a la derecha */
+    transform: translateY(-50%); /* Corrige la posición verticalmente */
+    z-index: 1; /* Asegura que el texto esté sobre la onda */
+  }
+  
+  .textos-header2 h2 {
     padding: 5px 20px; /* Reducir el espacio entre el texto y el borde */
     border-radius: 10px;
-    margin: 0 auto; /* Centrar el h2 y agregar margen en la parte superior e inferior */
-    margin-bottom: 10px;
+    margin: 0; /* Elimina el margen predeterminado del encabezado */
     font-size: 45px;
-    padding: 20px;
     text-align: center;
-    justify-content: center;
     text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
-    font: 20px;
     font-weight: 800;
     color: #071252;
     text-shadow: 2px 2px 4px #e4e0e0;
-    animation: mover-izquierda-derecha 2s linear infinite; /* Animación infinita */
     border: 2px solid #ccc; /* Agregar un borde alrededor del h2 */
-    max-width: fit-content; /* Ajustar el ancho del h2 al contenido */
-}
+  }
+  
 @keyframes mover-izquierda-derecha {
     0% {
         transform: translateX(-100px); /* Desde -100px (izquierda) */
@@ -234,130 +235,91 @@ a{
         transform: translateX(10px); /* Hasta 100px (derecha) */
     }
 }
-/*SECCION DE SERVICIOS*/
-.servicios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 20px auto;
-    max-width: 1200px;
+
+/*CONTENIDO DE NUESTRA HISTORIA*/
+
+.container {
+  width: 100%;
+  height: 550px; /* Pocisionamos la imagen en el tamaño */
+  background: #2980B9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, hsla(0, 0%, 100%, 0.641), hsla(196, 93%, 70%, 0.619), hsla(204, 64%, 44%, 0.696)), url(../img/FONDOS/fondo5.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, hsla(0, 0%, 6%, 0.641), hsla(195, 31%, 10%, 0.619), hsla(204, 95%, 85%, 0.696)), url(../img/FONDOS/fondo5.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  color: white; /* Texto blanco */
+  display: flex; /* Utilizamos flexbox */
 }
 
-.servicio {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/*contenedor de HISTORIA*/
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
 }
 
-.servicio img {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease;
+.left {
+  width: 50%;
+  padding-right: 20px;
+}
+.left h2{
+  font-size: 25px;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+.left p{
+  font-size: 16px;
+  text-align: justify;
+}
+.right {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
 }
 
-.servicio .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
-.servicio:hover .overlay {
-    opacity: 1;
+.slide {
+  min-width: 100%;
+  overflow: hidden;
 }
 
-.servicio:hover img {
-    transform: scale(1.1);
+img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
 }
 
-.servicio h3 {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    margin: 0;
-    padding: 10px;
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgba(3, 3, 3, 0.5);
+  border: none;
+  outline: none;
+  z-index: 1;
 }
-/*PRIMERA SECCION DE LOS BENEFICIOS: */
 
-  .beneficios {
-    border: 2px solid #ccc; /* Agrega un borde lineal a la sección */
-    border-radius: 10px; /* Añade esquinas redondeadas al borde */
-    padding: 20px; /* Añade espacio interno alrededor de la sección */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 10px auto;
-    max-width: 1200px;
-    
-  }
+.arrow-left {
+  color: #2ca9fc;
+  font-size: 40px;
+  left: 0;
+}
 
-  .imagen {
-    flex: 1;
-  }
-  
-  .contenido {
-    flex: 1;
-    margin-left: 40px;
-  }
-  .contenido h2{
-    font-size: 25px;
-    color: #987f05;
-    text-transform: uppercase;
-    padding-bottom: 15px;
-    text-shadow: 2px 2px 1px #000000;
-  }
-  .beneficio {
-    margin-bottom: 20px;
-  }
-  
-  .beneficio img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-    transition: transform 0.3s ease; /* Agrega una transición suave al icono */
-  }
-  
-  .beneficio:hover img {
-    transform: scale(1.1); /* Aumenta la escala del icono al pasar el mouse */
-  }
-  
-  .beneficio h3 {
-    margin: 0;
-    transition: transform 0.3s ease, color 0.3s ease; /* Agrega una transición suave al h3 */
-    transform: translateX(0); /* Inicialmente, el h3 no está trasladado */
-  }
-  
-  .beneficio:hover h3 {
-    color: #0053cf; /* Cambia el color del texto al pasar el mouse */
-    transform: translateX(10px); /* Traslada el h3 hacia la derecha al pasar el mouse */
-  }
-  
-  
-  .beneficio p {
-    margin-top: -15px;
-    margin-left: 60px;
-  }
-  
-  .beneficio-contenido {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  .beneficios .imagen2 img{
-    max-width: 100%;
-    width:360px;
-    height: auto;
-  
-  }
-  
+.arrow-right {
+  color: #2ca9fc;
+  font-size: 40px;
+  right: 0;
+}
+
+
 
   /*CREACION DEL NUEVO FOOTER*/
 /*Aquí debajo va el FOOTER*/

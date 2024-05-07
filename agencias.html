@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agencias</title>
     <link rel="stylesheet" href="css/agencias.css">
+      <!--LINK DE LAS FUENTES DE LETRA-->
+      <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <!--LINK PARA LLAMAR A LOS ICONOS DE LAS REDES SOCIALES-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -15,29 +18,48 @@
 <body>
     <header>
         <!--MENU DE NAVEGACION-->
-        <div class="menu container margen-interno">
-            <div class="contenedor">
-                <img src="img/LOGO MI PYME VEC 06-07-22.png" alt="Imagen">
-            </div>
-            <nav class="nav">
-                <a href="">Inicio</a>
-                <a href="">Acerca de</a>
-                <a href="">Servicios</a>
-                <a href="">Equipo Mi Pyme</a>
-                <a href="">Novedades</a>
-                <a href="">Agencias</a>
-                <a href="">Contacto</a>
-                <a href="">Mi Cartera Personal</a>
-                <span> </span>
-            </nav>
-            <div class="social">
-                <a href="https://www.facebook.com/mipymefinancierohn" class="facebook"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/mipymefinanciero?igshid=YmMyMTA2M2Y=" class="instagram"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
+        <header class="header">
+            <header class="header2">
+
+                <div class="logo"><a href=""><img src="img/LOGO MI PYME VEC 06-07-22.png" alt="Logo de la Empresa"></a></div>
+                <input type="checkbox" id="toggle">
+                <label for="toggle"> <img class="menu" src="menu.svg" alt="menu"></label>
+        
+        
+                    <nav class="navigation">
+        
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="#">Acerca de</a>
+                                <ul>
+                                    <li><a href="mision.html">Mision</a></li>
+                                    <li><a href="vision.html">Vision</a></li>
+                                    <li><a href="Valores.html">Valores</a></li>
+                                    <li><a href="#">Nuestros Clientes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Equipo Mi Pyme</a></li>
+                            <li><a href="#">Novedades</a></li>
+                            <li><a href="agencias.html">Agencias</a>
+                                <ul>
+                                    <li><a href="danli.html">Danlí</a></li>
+                                    <li><a href="Comayagua.html">Comayagua</a></li>
+                                    <li><a href="Siguatepeque.html">Siguatepeque</a></li>
+                                    <li><a href="Intibuca.html">Intibucá</a></li>
+                                    <li><a href="ElParaiso.html">El Paraíso</a></li>
+                                    <li><a href="SantaRosa.html">Santa Rosa De Copán</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="Contactos.html">Contacto </a></li>
+                            <li><a href="#">Mi cartera Personal</a></li>
+        
+                        </ul>
+                        
+                    </nav>
+            </header>
+        
+        </header>
         <!--AQUI SE COMIENZA LAS SLIDE O IMAGENES QUE SE CAMBIAN-->
         <div class="header-content container">
 
@@ -48,14 +70,14 @@
                     <div class="swiper-slide">
                         <div class="slaider">
                             <div class="slider-text">
-                                <h1>MI PYME FINANCIERO DANLÍ</h1>
+                                <h1>MI PYME FINANCIERO <br> DANLÍ</h1>
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo laboriosam
                                     dolores nemo saepe illo voluptatem aspernatur eligendi magnam iste vel, magni earum
                                     est. Illum dolore voluptates atque quidem provident dolorum.
                                 </p>
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Historia</a>
-                                    <a href="#" class="btn-2">Agencias</a>
+                                    <a href="danli.html" class="btn-1">Visitar Agencia</a>
+                                   <!-- <a href="#" class="btn-2">Agencias</a>-->
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -66,14 +88,14 @@
                     <div class="swiper-slide">
                         <div class="slaider">
                             <div class="slider-text">
-                                <h1>MI PYME FINANCIERO EL PARAISO</h1>
+                                <h1>MI PYME FINANCIERO <br> EL PARAISO</h1>
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo laboriosam
                                     dolores nemo saepe illo voluptatem aspernatur eligendi magnam iste vel, magni earum
                                     est. Illum dolore voluptates atque quidem provident dolorum.
                                 </p>
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Historia</a>
-                                    <a href="#" class="btn-2">Agencias</a>
+                                    <a href="ElParaiso.html" class="btn-1">Visitar Agencia</a>
+                                    <!-- <a href="#" class="btn-2">Agencias</a>-->
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -84,14 +106,14 @@
                     <div class="swiper-slide">
                         <div class="slaider">
                             <div class="slider-text">
-                                <h1>MI PYME FINANCIERO COMAYAGUA</h1>
+                                <h1>MI PYME FINANCIERO <br> COMAYAGUA</h1>
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo laboriosam
                                     dolores nemo saepe illo voluptatem aspernatur eligendi magnam iste vel, magni earum
                                     est. Illum dolore voluptates atque quidem provident dolorum.
                                 </p>
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Historia</a>
-                                    <a href="#" class="btn-2">Menu</a>
+                                    <a href="Comayagua.html" class="btn-1">Visitar Agencia</a>
+                                  <!-- <a href="#" class="btn-2">Agencias</a>-->
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -112,213 +134,18 @@
 
     </header>
 
-    <!--AGENCIAS-->
-    <main class="products">
-        <div class="tabs container">
-
-            <input type="radio" name="tabs" id="tab1" checked="checked" class="tabInput" value="1">
-            <!--Este value 1 es el valor del tab-->
-            <label for="tab1">Historia</label>
-            <div class="tab">
-                <!--ESTE DIV CONTIENE TODOS LOS TABS-->
-                <div class="swiper mySwiper-2" id="swiper1">
-
-                    <div class="swiper-wrapper">
-                        <!--ESTE CONTIENE TODAS LAS AGENCIAS-->
-
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <div class="product-img">
-                                    <h4>Agencia</h4>
-                                    <img src="img/agencias/danli/dnl1.jpg" alt="">
-                                </div>
-                                <div class="product-txt">
-                                    <h4>Ubicacion</h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, natus!</p>
-                                    <span class="telefono">Telefono</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <div class="product-img">
-                                    <h4>Agencia</h4>
-                                    <img src="img/agencias/danli/dnl2.jpg" alt="">
-                                </div>
-                                <div class="product-txt">
-                                    <h4>Ubicacion</h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, natus!</p>
-                                    <span class="telefono">Telefono</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <div class="product-img">
-                                    <h4>Agencia</h4>
-                                    <img src="img/agencias/danli/dnl3.jpg" alt="">
-                                </div>
-                                <div class="product-txt">
-                                    <h4>Ubicacion</h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, natus!</p>
-                                    <span class="telefono">Telefono</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-
-                </div>
-            </div>
-
-            <input type="radio" name="tabs" id="tab2" checked="checked" class="tabInput" value="2">
-            <!--Este value 1 es el valor del tab-->
-            <label for="tab2">Ubicaciones</label>
-            <div class="tab">
-                <!--ESTE DIV CONTIENE TODOS LOS TABS-->
-                <div class="swiper mySwiper-2" id="swiper2">
-
-                    <div class="swiper-wrapper">
-                        <!--ESTE CONTIENE TODAS LAS AGENCIAS-->
-
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <div class="product-img">
-                                    <h4>Agencia</h4>
-                                    <img src="img/agencias/danli/dnl4.jpg" alt="">
-                                </div>
-                                <div class="product-txt">
-                                    <h4>Ubicacion</h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, natus!</p>
-                                    <span class="telefono">Telefono</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <div class="product-img">
-                                    <h4>Agencia</h4>
-                                    <img src="img/agencias/danli/dnl5.jpg" alt="">
-                                </div>
-                                <div class="product-txt">
-                                    <h4>Ubicacion</h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, natus!</p>
-                                    <span class="telefono">Telefono</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <div class="product-img">
-                                    <h4>Agencia</h4>
-                                    <img src="img/agencias/danli/dnl6.jpg" alt="">
-                                </div>
-                                <div class="product-txt">
-                                    <h4>Ubicacion</h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, natus!</p>
-                                    <span class="telefono">Telefono</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-
-                </div>
-            </div>
-
-            <input type="radio" name="tabs" id="tab3" checked="checked" class="tabInput" value="3">
-            <!--Este value 1 es el valor del tab-->
-            <label for="tab3">Direcciones</label>
-            <div class="tab">
-                <!--ESTE DIV CONTIENE TODOS LOS TABS-->
-                <div class="swiper mySwiper-2" id="swiper3">
-
-                    <div class="swiper-wrapper">
-                        <!--ESTE CONTIENE TODAS LAS AGENCIAS-->
-
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <div class="product-img">
-                                    <h4>Agencia</h4>
-                                    <img src="img/agencias/danli/dnl7.jpg" alt="">
-                                </div>
-                                <div class="product-txt">
-                                    <h4>Ubicacion</h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, natus!</p>
-                                    <span class="telefono">Telefono</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <div class="product-img">
-                                    <h4>Agencia</h4>
-                                    <img src="img/agencias/danli/dnl8.jpg" alt="">
-                                </div>
-                                <div class="product-txt">
-                                    <h4>Ubicacion</h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, natus!</p>
-                                    <span class="telefono">Telefono</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <div class="product-img">
-                                    <h4>Agencia</h4>
-                                    <img src="img/agencias/danli/dnl9.jpg" alt="">
-                                </div>
-                                <div class="product-txt">
-                                    <h4>Ubicacion</h4>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, natus!</p>
-                                    <span class="telefono">Telefono</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-
-                </div>
-            </div>
-
-        </div>
-    </main>
-
     <!--LA SECCION EN DONDE IRIA TODA LA INFORMACION-->
     <section class="info container">
 
         <div class="info-img">
             <img src="img/agencias/danli/licDonald.jpg" alt="">
+            <div class="info-img-text">
+                <h2>Título de la imagen</h2>
+                <p>Párrafo corto describiendo la imagen.</p>
+            </div>
         </div>
 
-        <div class="info-txt">
+        <div class="info-txt textos-header2">
             <h2>Información</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint quidem quaerat cum, fugit soluta placeat
                 possimus ratione magni dolorem, repellendus necessitatibus maiores adipisci aliquam. Ea similique
@@ -330,7 +157,7 @@
     </section>
     <!--LA SECCION PARA CREAR UN HORARIO-->
     <section class="horario">
-        <div class="horario-info container">
+        <div class="horario-info container textos-header2">
             <h2>Horario</h2>
             <div class="horario-txt">
                 <div class="txt">
@@ -378,52 +205,62 @@
 
     <!--SECCION DEL MAPA-->
     <Section>
-        <iframe class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9930.423643116555!2d-86.57438558171032!3d14.028651516367113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6e682d6789a60b%3A0x74cdede2bb676116!2zRGFubMOtLCBFbCBQYXJhw61zbw!5e0!3m2!1ses-419!2shn!4v1713471153047!5m2!1ses-419!2shn"
-            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1W6XEVsPmRKFK-yEZfaeB1hkenXQaOAY&ehbc=2E312F&noprof=1" width="100%" height="500"></iframe>
     </Section>
 
     <!--CREACION DEL FOOTER-->
-    <footer class="footer container">
+    <section>
+        <footer>
 
-       
-        <div class="links">
-            <h4>Lorem ipsum dolor </h4>
-            <ul>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-            </ul>
-        </div>
-        <div class="links">
-            <h4>Lorem ipsum dolor</h4>
-            <ul>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-            </ul>
-        </div>
-        <div class="links">
-            <h4>Lorem ipsum dolor</h4>
-            <ul>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Lorem</a></li>
-            </ul>
-        </div>
-        <div class="links">
-            <h4>Lorem ipsum dolor</h4>
-            <div class="redes-sociales">
-                <a href="https://www.facebook.com/mipymefinancierohn" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/mipymefinanciero?igshid=YmMyMTA2M2Y=" class="instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <div class="container__footer">
+                <div class="box__footer">
+                    <div class="logo">
+                        <img src="img/LOGO MI PYME VEC 06-07-22.png" alt="">
+                    </div>
+                    <div class="terms">
+                        <p class="terms1">“Somos una empresa responsable, que se dedica a impulsar el crecimiento sostenible de las pequeñas empresas"</p>
+                    </div>
+                </div>
+                <div class="box__footer">
+                    <h2>Contáctanos y solicita ya tu crédito <br> en la agencia más cercana</h2>
+                    <a href="tel:27632042">Planta Principal</a>
+                    <a href="https://wa.me/50431591245">Agencia Danlí</a>
+                    <a href="https://wa.me/50433105369">Agencia Comayagua</a>
+                    <a href="https://wa.me/50431881005">Agencia Siguatepeque</a>
+                    <a href="https://wa.me/50431560020">Agencia Intibucá</a>
+                    <a href="https://wa.me/50487597908">Agencia El Paraíso</a>
+                    <a href="https://wa.me/50487849995">Agencia Santa Rosa De Copán</a>
+                </div>
+    
+                <div class="box__footer">
+                    <h2>Contacto</h2>
+                    
+                                       <p class="locacion">Danli, El Paraiso, <br> Honduras <br> <br>+(504) 2763-2042
+                                    </p>           
+                </div>
+    
+                <div class="box__footer">
+                    <h2>Redes Sociales</h2>
+                    <a href="https://www.facebook.com/mipymefinancierohn"  class="facebook"> <i class="fab fa-facebook-square"></i>Facebook</a>
+                    <a href="https://wa.me/50431731085?text=Me%20interesa%20su%20servicio" class="whatsapp"><i class="fab fa-whatsapp"></i>Whatsaap</a>
+                    <a href="https://hn.linkedin.com/company/mi-pyme-financiero-s-de-r-l-de-c-v" class="Linkedin"><i class="fab fa-linkedin"></i>Linkedin </a>
+                    <a href="https://instagram.com/mipymefinanciero?igshid=YmMyMTA2M2Y=" class="instagram"><i class="fab fa-instagram-square"></i> Instagram</a>
+                </div>
+    
             </div>
-        </div>
-    </footer>
+    
+            <div class="box__copyright">
+                <br>
+                <hr>
+                
+                <p class="copyright text-center">Todos los derechos Reservados. &copy; <script>
+                    document.write(new Date().getFullYear())
+                </script> Mi Pyme Financiero | Honduras C.A.
+                </p>
+            </div>
+        </footer>
+        <script src="scroll.js"></script>
+    </section>
 
     <!--LINK DE LA LIBRERIA DE JS-->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

@@ -22,7 +22,7 @@ a{
     
 }
 .header{
-    background: url(../img/agencias/danli/Danlí-1.jpg);/*Esto de ../ nos ayuda a retroceder sobre un directorio*/
+    background: url(../img/VALORES/valores-empresariales.jpg);/*Esto de ../ nos ayuda a retroceder sobre un directorio*/
     background-position: center bottom;/*Aqui le damos el aspecto que tendra la imagen*/
     background-attachment: contain;
     background-size: cover;
@@ -159,7 +159,7 @@ a{
                 font-weight: 800;
                 text-align: center;
                 line-height: 1.6;
-                animation: mover-izquierda-derecha 5s linear infinite; /* Animación infinita */
+               
             }
             h1:hover{
                 color: #fffb00;
@@ -237,92 +237,93 @@ a{
     width: 100%;
 }
   
-.textos-header2 h2{
-    padding: 5px 20px; /* Reducir el espacio entre el texto y el borde */
-    border-radius: 10px;
-    margin: 0 auto; /* Centrar el h2 y agregar margen en la parte superior e inferior */
-    margin-bottom: 10px;
-    font-size: 45px;
-    padding: 20px;
-    text-align: center;
-    justify-content: center;
-    text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
-    font: 20px;
-    font-weight: 800;
-    color: #071252;
-    text-shadow: 2px 2px 4px #e4e0e0;
-    animation: mover-izquierda-derecha 2s linear infinite; /* Animación infinita */
-    border: 2px solid #ccc; /* Agregar un borde alrededor del h2 */
-    max-width: fit-content; /* Ajustar el ancho del h2 al contenido */
-}
-@keyframes mover-izquierda-derecha {
-    0% {
-        transform: translateX(-100px); /* Desde -100px (izquierda) */
-    }
-    100% {
-        transform: translateX(10px); /* Hasta 100px (derecha) */
-    }
+/*AQUI ESTAN LOS VALORES*/
+
+.valores {
+  text-align: center;
+  padding: 20px;
 }
 
-  .valores {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .valores h2 {
-    font-size: 28px;
-  }
-  
-  .valores p {
-    font-size:18px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-  }
-  
-  .tarjetas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Espacio entre las tarjetas */
-  }
-  
-  .tarjeta {
-    width: calc(50% - 20px); /* Ancho del 50% del contenedor menos el espacio entre las tarjetas */
-  margin-bottom: 20px; /* Espacio entre las filas de tarjetas */
-    width: 45%;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #e0e0e0; 
-  }
-  
-  .tarjeta:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to bottom, #fafafa 0%, #c9e4faad 50%, #038ae456 100%); /* Gradiente de tonos azules */
-  }
-  
-  .tarjeta h3 {
-    font-size: 24px;
-    color: #5a5858c0;
-  }
-  
-  .tarjeta img {
-    width: 80%;
-    margin: 10px 0;
-    border-radius: 4px;
-  }
-  
-  .tarjeta p {
-    font-size: 14px;
-    font-style: italic;
-  }
+.valores h2 {
+  font-size: 28px;
+}
 
-    /*CREACION DEL NUEVO FOOTER*/
+.valores p {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.tarjeta {
+  position: relative;
+  width: calc(50% - 20px);
+  margin-bottom: 20px;
+}
+
+.tarjeta:hover img {
+  filter: brightness(0.7);
+  transform: scale(1.05);
+}
+
+.tarjeta:hover h3,
+.tarjeta:hover p {
+  opacity: 1;
+  color: white;
+}
+
+.tarjeta p {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+ margin-top: -130px;
+}
+
+.tarjeta h3 {
+  opacity: 0;
+  position: absolute;
+  top: 20px; /* Ajuste para que el título quede dentro de la imagen */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1; /* Para que el título esté sobre el párrafo */
+}
+
+.tarjeta h3 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.tarjeta p {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 90%;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: filter 0.3s ease;
+}
+
+/*CREACION DEL NUEVO FOOTER*/
 /*Aquí debajo va el FOOTER*/
 
 footer{

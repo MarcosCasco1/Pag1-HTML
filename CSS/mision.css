@@ -139,15 +139,14 @@ text-transform: uppercase;
 margin-top: -150px; /* Ajustar el margen superior */
 }
 .misionvideo h1:hover{
-    color: #02ddff;
-    text-shadow: 2px 2px 4px #000000;
+color: #02ddff;
+text-shadow: 2px 2px 4px #000000;
     transform: translateY(-10px); /* Efecto de elevación */
 }
 
 .misionvideo p{
-
 font-size: 30px;
-color: #02ddff;
+color: #ffffff;
 text-shadow: 2px 2px 2px #222121;
 /*text-shadow: 2px 2px 4px #ffffff;*/
 font-weight: 600;
@@ -156,11 +155,7 @@ width:100%;
 margin-top:100px; /* Agregar margen superior */
 text-align: center;
 }
-.misionvideo p:hover{
-    color: #02ddff;
-    text-shadow: 2px 2px 4px #222121;
-    transform: translateX(-10px); /* Efecto de elevación */
-}
+
 
 #mision {
 min-height: 100vh;
@@ -181,7 +176,7 @@ video{
     background: #1c1c1d;
     opacity: 0.5;
     mix-blend-mode: overlay;
-    z-index: 2;
+  
 }
 button {
     background: linear-gradient(45deg, #ff6600, #ffe607); /* Degradado de color */
@@ -214,11 +209,9 @@ footer{
     padding: 40px 0px;
     /*background-image: url(../Images/background-footer.svg);*/
     background-size: cover;
-    
     background: linear-gradient(to right, #002454, #0077FF);
-    background-color: #000000;
-    -webkit-mask-image: url("../background-footer.svg");
-    mask-image: url("../background-footer.svg");
+    /*-webkit-mask-image: url("../background-footer.svg");
+    mask-image: url("../background-footer.svg");*/
     -webkit-mask-size: cover;
     mask-size: cover;
     z-index: 1000;
